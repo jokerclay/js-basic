@@ -1044,3 +1044,90 @@ oopsGlobal:  5
 
 ## 47. Local Scope and functions
 
+**varoables which are declared within a function as well as the function parameters have local scope.**
+
+**That means they're only visible from within the function**
+
+```js
+~~>:~/test $ bat localVariable.js
+───────┬─────────────────────────────────────────────────────────
+       │ File: localVariable.js
+───────┼─────────────────────────────────────────────────────────
+   1   │ function myLocalScope()
+   2   │ {
+   3   │     var myVar = 5;
+   4   │     console.log(myVar);
+   5   │ }
+   6   │ myLocalScope();
+   7   │ console.log(myVar);
+───────┴─────────────────────────────────────────────────────────
+~~>:~/test $ nodejs localVariable.js
+5
+/home/pi/test/localVariable.js:7
+console.log(myVar);
+            ^
+
+ReferenceError: myVar is not defined
+```
+
+
+
+
+
+## 49.Global vs. Local scope in function
+
+**it is possiable to have both loacal and global variables with the same name **
+
+```js
+~~>:~/test $ bat g-l-scope.js
+───────┬─────────────────────────────────────────────────────────
+       │ File: g-l-scope.js
+───────┼─────────────────────────────────────────────────────────
+   1   │ var outerWear = "T-shirt";
+   2   │
+   3   │ function myOutFit()
+   4   │ {
+   5   │     var outerWear = "sweater";
+   6   │
+   7   │     return outerWear;
+   8   │ }
+   9   │
+  10   │ console.log(myOutFit());
+  11   │ console.log(outerWear);
+  12   │
+───────┴─────────────────────────────────────────────────────────
+~~>:~/test $ nodejs g-l-scope.js
+sweater
+T-shirt
+~~>:~/test $
+```
+
+
+
+
+
+
+
+## 50.Return a  value from a fucntion with return 
+
+
+
+```js
+~~>:~/test $ bat  return.js
+───────┬─────────────────────────────────────────────────────────
+       │ File: return.js
+───────┼─────────────────────────────────────────────────────────
+   1   │ function minusSeven(num)
+   2   │ {
+   3   │     return num-7;
+   4   │ }
+   5   │ console.log(minusSeven(10))
+───────┴─────────────────────────────────────────────────────────
+~~>:~/test $ nodejs return.js
+3
+```
+
+
+
+
+
