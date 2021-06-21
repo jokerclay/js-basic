@@ -1131,3 +1131,132 @@ T-shirt
 
 
 
+## 51. Undertstand Undefined Value return from a function
+
+
+
+**If you don not specify a return value the return value is undefined **
+
+```
+───────┬─────────────────────────────────────────────────────────
+       │ File: returnUdefined.js
+───────┼─────────────────────────────────────────────────────────
+   1   │ var sum = 0;
+   2   │ function addTree()
+   3   │ {
+   4   │     sum = sum + 3;
+   5   │     console.log(sum);
+   6   │ }
+   7   │
+   8   │ function addFive()
+   9   │ {
+  10   │     sum += 5;
+  11   │
+  12   │     console.log(sum);
+  13   │ }
+  14   │
+  15   │
+  16   │
+  17   │ // addTree();
+  18   │ // addFive();
+  19   │ console.log(addFive())
+───────┴─────────────────────────────────────────────────────────
+~~>:~/test $ nodejs returnUdefined.js
+5
+undefined
+```
+
+
+
+
+
+
+
+
+
+## 52. Assignment with a Returned Value
+
+
+
+```js
+~~>:~/test $ bat returned.js
+───────┬─────────────────────────────────────────────────────────
+       │ File: returned.js
+───────┼─────────────────────────────────────────────────────────
+   1   │ var changed = 0;
+   2   │
+   3   │ function change(num)
+   4   │ {
+   5   │     return(num + 5) / 3;
+   6   │ }
+   7   │
+   8   │ changed = change(10);
+   9   │
+  10   │ console.log(changed)
+───────┴─────────────────────────────────────────────────────────
+~~>:~/test $ nodejs returned.js
+5
+```
+
+
+
+
+
+## 53. Stand in Line
+
+In computer science a cue is a abstract data structure where items are kept in order
+
+New items can be added to the back of the  cue and  old items are taken off from the front of the cue 
+
+```js
+~~>:~/test $ bat standInLine.js
+───────┬───────────────────────────────────────────────────────────────        │ File: standInLine.js
+───────┼───────────────────────────────────────────────────────────────    1   │ function nextInLine(arr,item)
+   2   │ {
+   3   │     arr.push(item);
+   4   │     return arr.shift();
+   5   │ }
+   6   │
+   7   │ var testArr = [1,2,3,4,5]
+   8   │
+   9   │ // 打印之前的数组
+  10   │ console.log("Before: " + JSON.stringify(testArr));
+  11   │
+  12   │ // 添加到第六个元素
+  13   │ console.log(nextInLine(testArr,6));
+  14   │
+  15   │ // 打印添加后的数组
+  16   │ console.log("After：" + JSON.stringify(testArr));
+───────┴───────────────────────────────────────────────────────────────~~>:~/test $ nodejs standInLine.js
+Before: [1,2,3,4,5]
+1
+After：[2,3,4,5,6]
+```
+
+
+
+
+
+
+
+## 54. Boolen Values
+
+**Boolen are another datatype in JavaScript , There only two value `true` or `false`**
+
+
+
+```js
+───────┬───────────────────────────────────────────────────────────────        │ File: boolen.js
+───────┼───────────────────────────────────────────────────────────────    1   │ function welcomeToBlooens()
+   2   │ {
+   3   │     return true;
+   4   │ }
+───────┴───────────────────────────────────────────────────────────────
+```
+
+
+
+
+
+## 55. Use conditional Logic with If Statements
+

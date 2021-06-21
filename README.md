@@ -1131,3 +1131,55 @@ T-shirt
 
 
 
+
+
+## 51. Use Conditional Logic with If statements
+
+```js
+~~>:~/test $ bat if.js
+───────┬───────────────────────────────────────────────────────────────
+       │ File: if.js
+───────┼───────────────────────────────────────────────────────────────
+   1   │ function ourTrueOrFalse(isItTrue)
+   2   │ {
+   3   │     if(isItTrue)
+   4   │     {
+   5   │         return console.log("Yes, it's true");
+   6   │
+   7   │     }
+   8   │
+   9   │     return console.log("No, it's false");
+  10   │ }
+  11   │
+  12   │ ourTrueOrFalse(true);
+───────┴───────────────────────────────────────────────────────────────
+~~>:~/test $ nodejs if.js
+Yes, it's true
+```
+
+
+
+
+
+## 52. Comparison with the Equality Operator
+
+```js
+~~>:~/test $ bat equal.js
+───────┬──────────────────────────────────────────────────────────────
+       │ File: equal.js
+───────┼──────────────────────────────────────────────────────────────
+   1   │ function testEqual(val)
+   2   │ {
+   3   │     if (val == 12)
+   4   │     {
+   5   │         return "Equal";
+   6   │     }
+   7   │     return "Not Equal"
+   8   │ }
+   9   │
+  10   │ console.log(testEqual(10));
+───────┴──────────────────────────────────────────────────────────────
+~~>:~/test $ nodejs equal.js
+Not Equal
+```
+
