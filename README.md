@@ -1183,3 +1183,191 @@ Yes, it's true
 Not Equal
 ```
 
+
+
+
+
+## 53. Comparison with the Strict Equality Operator
+
+* equality `==`
+
+* strict equal sign `===`
+
+  * difference:
+
+    **the double equals sign attempts to convert both values being compared  to a commmon type **
+    **the strict equality operator does not do the type conversion**
+
+    ```
+    3 == 3			// => true
+    3 === ‘3’		// => flase
+    ```
+
+  ```js
+  ~~>:~/test $ bat  strictEuqal.js
+  ───────┬────────────────────────────────────────────────────────────
+         │ File: strictEuqal.js
+  ───────┼────────────────────────────────────────────────────────────
+     1   │ function testEqual(val)
+     2   │ {
+     3   │     if (val === 10)
+     4   │     {
+     5   │         return "Equal";
+     6   │     }
+     7   │     return "Not Equal"
+     8   │ }
+     9   │
+    10   │ console.log(testEqual('10'));
+  ───────┴────────────────────────────────────────────────────────────
+  ~~>:~/test $ nodejs strictEuqal.js q
+  Not Equal
+  ```
+
+
+
+## 54. Comparison with the Inequality Operator
+
+
+
+```js
+~~>:~/test $ bat InEuqal.js
+───────┬──────────────────────────────────────────────────────────────
+       │ File: InEuqal.js
+───────┼──────────────────────────────────────────────────────────────
+   1   │ function testEqual(val)
+   2   │ {
+   3   │     if (val != 12)
+   4   │     {
+   5   │         return " Not Equal";
+   6   │     }
+   7   │     return "Equal"
+   8   │ }
+   9   │
+  10   │ console.log(testEqual(10));
+───────┴──────────────────────────────────────────────────────────────
+~~>:~/test $ nodejs InEuqal.js
+ Not Equal
+```
+
+
+
+
+
+## 55. Comparison with the Strict Inequality Operator
+
+```js
+function testStrictNotEqual(val)
+{
+        if (val !== 17)
+        {
+                return "Not equal"
+        }
+
+        return "Equal"
+}
+console.log(testStrictNotEqual("17"));
+```
+
+
+
+
+
+```
+Not equal
+```
+
+
+
+
+
+## 56. Comparison with the Logical and Operator
+
+```js
+───────┬──────────────────────────────────────────────────────────────
+       │ File: greater.js
+───────┼──────────────────────────────────────────────────────────────
+   1   │ function testGreaterThan(val)
+   2   │ {
+   3   │     if (val > 100 )
+   4   │     {
+   5   │         return "over 100";
+   6   │     }
+   7   │     if(val > 10)
+   8   │     {
+   9   │         return "over 10";
+  10   │     }
+  11   │
+  12   │     return "10 or under"
+  13   │ }
+  14   │
+  15   │ console.log(testGreaterThan(10))
+───────┴──────────────────────────────────────────────────────────────
+~~>:~/test $ nodejs greater.js
+10 or under
+```
+
+
+
+
+
+## 57 . Comparison with the Greater Than Or Equal to  Operator
+
+```js
+~~>:~/test $ bat greaterOrEqual.js
+───────┬──────────────────────────────────────────────────────────────
+       │ File: greaterOrEqual.js
+───────┼──────────────────────────────────────────────────────────────
+   1   │ function testGreaterThanOrEqual(val)
+   2   │ {
+   3   │     if (val >= 20 )
+   4   │     {
+   5   │         return "20 or over ";
+   6   │     }
+   7   │     if(val >=10)
+   8   │     {
+   9   │         return "10 or over ";
+  10   │     }
+  11   │
+  12   │     return " Less than 10"
+  13   │ }
+  14   │
+  15   │ console.log(testGreaterThanOrEqual(10))
+───────┴──────────────────────────────────────────────────────────────
+~~>:~/test $ nodejs  greaterOrEqual.js
+10 or over
+```
+
+
+
+
+
+## 58. Comparison with the Less Than Operator
+
+```js
+~~>:~/test $ bat lessthan.js
+───────┬──────────────────────────────────────────────────────────────
+       │ File: lessthan.js
+───────┼──────────────────────────────────────────────────────────────
+   1   │ function testGreaterThanOrEqual(val)
+   2   │ {
+   3   │     if (val < 20 )
+   4   │     {
+   5   │         return "under 20";
+   6   │     }
+   7   │     if(val < 55)
+   8   │     {
+   9   │         return "under 55";
+  10   │     }
+  11   │
+  12   │     return "55 or over"
+  13   │ }
+  14   │
+  15   │ console.log(testGreaterThanOrEqual(10))
+───────┴──────────────────────────────────────────────────────────────
+~~>:~/test $ nodejs lessthan.js
+under 20
+```
+
+
+
+## 59. Comparison with the Less Than Or Equal to  Operator

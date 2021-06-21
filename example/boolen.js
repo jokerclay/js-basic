@@ -1,0 +1,4 @@
+function welcomeToBlooens()
+{
+	return true;
+}
