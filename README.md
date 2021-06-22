@@ -1695,5 +1695,583 @@ switchState("9")
 
 
 
+## 68. Multiple Identical Options in switch Statements
 
+
+
+**Different input Get same out put**
+
+```js
+function seuentialSizes(val)
+{
+    var anwser = "";
+    switch(val)
+    {
+        case 1:
+        case 2:
+        case 3:
+            anwser ="Low"
+        break;
+        case 4:
+        case 5:
+        case 6:
+            anwser ="Mid"
+        break;
+        case 7:
+        case 8:
+        case 9:
+            anwser ="High"
+        break;
+    }
+    return anwser
+
+}
+
+console.log(seuentialSizes(9))
+
+
+// output =>
+// High
+```
+
+
+
+
+
+
+
+## 69. Return  a Boolen values From Functions
+
+
+
+**all the logical operator return a boolen value**
+
+```js
+function isLess(a,b)
+{
+    return a<b;
+}
+
+console.log(isLess(12,8))
+
+
+// output =>
+// false
+```
+
+
+
+
+
+## 70. Return rearly pattern from Function
+
+```js
+function abTest(a,b)
+{
+    if(a<0 || b < 0)
+    {
+        return undefined;
+
+    }
+
+    return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b),2));
+}
+
+console.log(abTest(-2,2));
+
+
+// output =>
+// undefined
+
+```
+
+
+
+
+
+
+
+## 70. Counting Cards
+
+```js
+var count = 0;
+
+function cc(card)
+{
+    switch(card)
+    {
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        case 6:
+            count++;
+            break;
+        case 10:
+        case "J":
+        case "Q":
+        case "K":
+        case "A":
+            count--;
+            break;
+    }
+    var holdbet = "Hold"
+    if(count > 0)
+    {
+        holdbet = "Bet"
+    }
+
+    return count + " " + holdbet;
+}
+
+
+cc(2);
+cc('K');
+cc(10);
+cc('K');
+cc('A');
+console.log(cc(4));
+
+
+// output =>
+// -2 Hold
+```
+
+
+
+
+
+## 71. build Objects
+
+**Objects are simliar to array, but object use property to access data instead of index**
+
+the property is before the `:` the value is after the value
+
+**`property : value`**
+
+the value can be number string array ... Any  datatypes ion javaScript
+
+```js
+var myDog = {
+
+    "name":"Camper",
+    "leg":4,
+    "tails":1,
+    "friends":["everyingthing !"]
+};
+console.log(myDog)
+
+
+
+
+// output =>
+// { name: 'Camper', leg: 4, tails: 1, friends: [ 'everyingthing !' ] }
+
+```
+
+
+
+
+
+
+
+## 72. Accessing ot Object properties with Dot notation
+
+there two ways to access object property
+
+* `.` Dot notation
+
+  ```js
+  var testObj={
+      "hat":"ballcap",
+      "shirt":"jersey",
+      "shoes": "cleats"
+  };
+  
+  var hatValue = testObj.hat;
+  var shirtValue = testObj.shoes;
+  
+  console.log(hatValue);
+  console.log(shirtValue);
+  
+  // output =>
+  // ballcap
+  // cleats
+  
+  ```
+
+  
+
+*  Bracket Notation
+
+  **you can use Bracket Notation anytime, But it required when the property name have space **
+
+  ```js
+  ar myObj = {
+      "the name":"clay",
+      "my drink":"coke"
+  }
+  
+  var theName = myObj["the name"];
+  var theDrink = myObj["my drink"];
+  
+  console.log(theName);
+  console.log(theDrink);
+  
+  
+  
+  // output =>
+  // clay
+  // coke
+  
+  ```
+
+  
+
+
+
+## 73. Accessing Object Properties with Variables
+
+```js
+var testObj = {
+    12: "Namath",
+    16: "Montana",
+    19: "Unitas"
+};
+
+
+var playerNumber = 16;
+var player = testObj[playerNumber];
+
+console.log(player);
+
+
+
+
+// output =>
+// Montana
+```
+
+
+
+
+
+## 74. Updating Object Properties
+
+```js
+var myDog = {
+
+    "name":"Camper",
+    "leg":4,
+    "tails":1,
+    "friends":["everyingthing !"]
+};
+
+console.log(myDog.name)
+
+// update myDog's name property
+myDog.name = "Happy Camper ~"
+console.log(myDog.name)
+
+// output =>
+// Camper
+// Happy Camper ~
+
+```
+
+
+
+
+
+## 75. Add new Properties to an object
+
+```js
+var myDog = {
+
+    "name":"Camper",
+    "leg":4,
+    "tails":1,
+    "friends":["everyingthing !"]
+};
+
+console.log(myDog)
+
+myDog.color = "black and white"
+console.log(myDog)
+```
+
+output
+
+```
+{ name: 'Camper', leg: 4, tails: 1, friends: [ 'everyingthing !' ] }
+{
+  name: 'Camper',
+  leg: 4,
+  tails: 1,
+  friends: [ 'everyingthing !' ],
+  color: 'black and white'
+}
+```
+
+
+
+
+
+## 76. Delete a property from a object
+
+**use` delete ` key word**
+
+```js
+var myDog = { 
+
+    "name":"Camper",
+    "leg":4,
+    "tails":1,
+    "friends":["everyingthing !"]
+};
+console.log(myDog)
+
+delete myDog.frien
+```
+
+output
+
+```
+{ name: 'Camper', leg: 4, tails: 1, friends: [ 'everyingthing !' ] }
+{ name: 'Camper', leg: 4, tails: 1 }
+
+```
+
+
+
+## 77. Using Objects for Lookups
+
+use objects to lookup values 
+
+```js
+function lookUp(val)
+{
+    var result = "";
+    var lookup =  {
+        "alpha":"Adams",
+        "bravo":"Boston",
+        "charlie":"Chicago",
+        "delta":"Denver",
+        "echo":"Easy",
+        "foxtrot":"frank"
+    };
+
+    result = lookup[val];
+
+    return result;
+}
+
+console.log(lookUp("echo"));
+
+
+
+
+// output =>
+// Easy
+
+```
+
+
+
+
+
+
+
+## 78. Testing Objects for Properties
+
+* **check  if a object have a specific property**
+
+  
+
+```js
+var myDog = {
+
+    "name":"Camper",
+    "leg":4,
+    "tails":1,
+    "friends":["everyingthing !"]
+};
+
+function checkObj(checkProp)
+{
+
+if(myDog.hasOwnProperty(checkProp))
+{
+    return myDog[checkProp]
+}
+else{
+    return "Not Found !"
+}
+}
+console.log(checkObj("head"))
+
+
+
+
+// output =>
+// Not Found !
+
+```
+
+
+
+```js
+var myDog = {
+
+    "name":"Camper",
+    "leg":4,
+    "tails":1,
+    "friends":["everyingthing !"]
+};
+
+function checkObj(checkProp)
+{
+
+if(myDog.hasOwnProperty(checkProp))
+{
+    return myDog[checkProp]
+}
+else{
+    return "Not Found !"
+}
+}
+console.log(checkObj("name"))
+
+
+
+
+// output =>
+// Camper
+```
+
+
+
+
+
+
+
+## 79. Maniplating Complex Objecets
+
+**JavaScript Objects is a way  can store flexible data  **
+
+```js
+var myMusic = [
+    {
+   "artist":"Billy Joel",
+    "title":"Piano Man",
+    "release_year":1973,
+    "formats":[
+        "CD",
+        "8T",
+        "LP"
+    ],
+    "gold": true
+    },
+
+    {
+
+   "artist":"Beau Carnes",
+    "title":"Cereal Man",
+    "release_year":2003,
+    "formats":[
+        "Youtube video"
+    ],
+
+    }
+
+]
+console.log(myMusic)
+```
+
+```
+output
+[
+  {
+    artist: 'Billy Joel',
+    title: 'Piano Man',
+    release_year: 1973,
+    formats: [ 'CD', '8T', 'LP' ],
+    gold: true
+  },
+  {
+    artist: 'Beau Carnes',
+    title: 'Cereal Man',
+    release_year: 2003,
+    formats: [ 'Youtube video' ]
+  }
+]
+```
+
+
+
+
+
+## 80. Accessing Nested Objects
+
+**访问多层对象的属性**
+
+```js
+var myStorage = {
+    "car":{
+        "inside":{
+            "glove box":"maps",
+            "passenger seat":"crumbs"
+        },
+        "outside":{
+            "trunk":"jack"
+        }
+    }
+};
+
+var gloveBoxContents = myStorage.car.inside["glove box"];
+
+console.log(gloveBoxContents )
+
+
+
+// output =>
+// maps
+```
+
+
+
+
+
+## 82. Access Nested Arrays
+
+**访问多层数组**
+
+```js
+var myPlants = [
+    {
+        type:"flowers",
+        list:[
+            "rose",
+            "tulip",
+            "dandelion"
+        ]
+    },
+    {
+        type:"trees",
+        list:[
+            "fir",
+            "pine",
+            "birch"
+        ]
+    }
+];
+
+var secondTree = myPlants[1].list[1];
+console.log(secondTree);
+
+
+
+// output =>
+// pine
+```
 
