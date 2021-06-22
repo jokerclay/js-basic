@@ -1611,3 +1611,89 @@ testLogicalAnd(3);
 
 
 
+## 66.Golf Code
+
+```js
+    var names = ["Hole-in-One","Eagle","Birdie","par","Bogey","Double Bogey","Go Home"];
+
+    function golfScore(strokes,par)
+    {
+            if(strokes == 1)
+            {
+                return names[0]
+            }
+            else if(strokes <= par-2)
+            {
+                return names[1]
+            }
+            else if(strokes == par -1)
+            {
+                return names[2]
+            }
+            else if(strokes == par)
+            {
+                return names[3]
+            }
+            else if(strokes ==par+1)
+            {
+                return names[4]
+            }
+            else if(strokes ==par+2)
+            {
+                return names[5]
+            }
+            else if(strokes >= par +3 )
+            {
+                return names[6]
+            }
+    }
+
+console.log(golfScore(5,4));
+
+```
+
+
+
+
+
+
+
+## 67.Switch statement
+
+
+
+```js
+function switchState(val)
+{
+switch(val)
+{
+    case "1":
+    console.log( "number 1")
+    break;
+    case "2":
+    console.log( "number 2")
+    break;
+    case "3":
+    console.log( "number 3")
+    break;
+    case "4":
+    console.log( "number 4")
+    break;
+        default:
+        console.log("Not Included")
+}
+
+}
+
+switchState("9")
+
+
+
+// output =>
+// Not Included
+```
+
+
+
+
+
