@@ -1317,7 +1317,7 @@ Not equal
 ───────┬──────────────────────────────────────────────────────────────
        │ File: greaterOrEqual.js
 ───────┼──────────────────────────────────────────────────────────────
-   1   │ function testGreaterThanOrEqual(val)
+`   1   │ function testGreaterThanOrEqual(val)`
    2   │ {
    3   │     if (val >= 20 )
    4   │     {
@@ -1371,3 +1371,243 @@ under 20
 
 
 ## 59. Comparison with the Less Than Or Equal to  Operator
+
+```js
+function testLessOrEqual(val)
+{
+    if(val <= 12)
+    {
+        return "Smaller than Or equal to 12";
+    }
+    if(val <= 24)
+    {
+        return "Smaller than Or equal to 24";
+    }
+    return "More Than 24";
+}
+
+
+console.log(testLessOrEqual(10))
+
+
+
+// output =>
+// Smaller than Or equal to 12
+```
+
+
+
+
+
+## 60. Comparisons with the Logical And operator
+
+```js
+function testLogicalAnd(val)
+{
+    if(val <= 50 && val >=25)		// both of it must be true 
+    {
+        return "Yes";
+    }
+        return "No";
+}
+
+console.log(testLogicalAnd(30))
+
+
+// output =>
+// Yes
+```
+
+
+
+
+
+
+
+## 61. Comparisons with the Logical Or operator
+
+```js
+function testLogicalAnd(val)
+{
+    if(val > 50 ||  val <25)
+    {
+        return "Yes";
+    }
+        return "No";
+}
+
+console.log(testLogicalAnd(30))
+
+
+// output =>
+// No
+```
+
+
+
+
+
+## 62. Else
+
+```js
+function testLogicalAnd(val)
+{
+    var result = "";
+
+    if(val > 50)
+    {
+        result = "Bigger than 50"
+    }
+    else
+    {
+        result = "Less than 50"
+
+    }
+    console.log(result);
+}
+
+testLogicalAnd(30)
+
+// output =>
+// Less than 50
+```
+
+
+
+
+
+## 63. Else if
+
+```js
+function testLogicalAnd(val)
+{
+    var result = "";
+
+    if(val > 10)
+    {
+        result = "Bigger than 10"
+    }
+    else if(val < 5)
+    {
+        result = "Less than 5"
+    }
+    else
+    {
+        result = "Between 5 and 10";
+    }
+    console.log(result);
+}
+
+testLogicalAnd(6)
+
+
+// output =>
+// Between 5 and 10
+```
+
+
+
+
+
+## 64. Logical Oreder in If else Statements
+
+```js
+function testLogicalAnd(val)
+{
+    var result = "";
+
+    if(val < 10)
+    {
+        result = "Less than 10"
+    }
+    else if(val < 5)
+    {
+        result = "Less than 5"
+    }
+    else
+    {
+        result = "Greater ot eequal to 10";
+    }
+    console.log(result);
+}
+
+testLogicalAnd(3)
+
+
+
+// output =>
+// Less than 10
+```
+
+**SO the order is matter , when you use else if  you  should thing about the order **
+
+```js
+function testLogicalAnd(val)
+{
+    var result = "";
+
+    if(val < 5)
+    {
+        result = "Less than 5"
+    }
+    else if(val < 10)
+    {
+        result = "Less than 10"
+    }
+    else
+    {
+        result = "Greater ot eequal to 10";
+    }
+    console.log(result);
+}
+
+testLogicalAnd(3)
+
+
+
+// output =>
+// Less than 5
+```
+
+
+
+## 65. Chaining If Else Statements
+
+```js
+function testLogicalAnd(val)
+{
+    result = ""
+    if(val < 5)
+    {
+        result = "Tiny"
+    }
+    else if(val < 10)
+    {
+        result = "Small"
+    }
+     else if(val < 15)
+    {
+        result = "Medium"
+    }
+      else if(val < 20)
+    {
+        result = "Large"
+    }
+     else {
+        result = "Huge";
+    }
+    console.log(result);
+}
+
+testLogicalAnd(3);
+
+
+
+// output =>
+// Tiny
+```
+
+
+
+
+
