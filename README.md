@@ -2338,16 +2338,19 @@ function updateRecords(id, prop, value)
 }
 
 console.log(collection)
-console.log("============================ After =============================")
-console.log(updateRecords(5493, "ddsdd", "ABBcdsdsA"));
+console.log("======================= update tracks ==========================")
+console.log(updateRecords(5493, "tracks", "added a tracks in the  Array"));
 
+console.log("\n")
+console.log("========================= add prop =============================")
+console.log(updateRecords(5493, "ddsdd", "ABBcdsdsA"));
 
 
 ```
 
 output
 
-```
+```js
 {
   '1245': { album: '', artist: ' Robert Palmer', tracks: [] },
   '2468': {
@@ -2362,7 +2365,7 @@ output
   },
   '5493': { album: 'ABBA Gold' }
 }
-============================ After =============================
+======================= update tracks ==========================
 {
   '1245': { album: '', artist: ' Robert Palmer', tracks: [] },
   '2468': {
@@ -2375,7 +2378,189 @@ output
     artist: 'Bon Jovi',
     tracks: [ 'Let it Rock', 'You Give Love a Bad Name' ]
   },
-  '5493': { album: 'ABBA Gold', ddsdd: 'ABBcdsdsA' }
+  '5493': { album: 'ABBA Gold', tracks: [ 'added a tracks in the  Array' ] }
 }
+
+
+========================= add prop =============================
+{
+  '1245': { album: '', artist: ' Robert Palmer', tracks: [] },
+  '2468': {
+    album: '1999',
+    artist: 'Prince',
+    tracks: [ '1999', 'Little red Corvette' ]
+  },
+  '2546': {
+    album: 'Slippery When Wet',
+    artist: 'Bon Jovi',
+    tracks: [ 'Let it Rock', 'You Give Love a Bad Name' ]
+  },
+  '5493': {
+    album: 'ABBA Gold',
+    tracks: [ 'added a tracks in the  Array' ],
+    ddsdd: 'ABBcdsdsA'
+  }
+}
+```
+
+
+
+
+
+
+
+## 84. Interate with While  Loop
+
+**Loop allow you to run the same code multiple times**
+
+* While loop is that while a specified condition is **true** and **stop** noce **it's no longer true**
+
+  ```js
+  var myArray = [];
+  
+  var i = 0;
+  
+  while (i<5){
+      myArray.push(i);
+      i++;
+  }
+  
+  console.log(myArray);
+  // output => myArray = [0,1,2,3,4]
+  ```
+
+  
+
+## 85. Iterate with For loop
+
+```js
+var myArray = []
+
+for(var i=0; i<5; i++){
+    myArray.push(i)
+}
+
+console.log(myArray)
+// output => myArray = [0,1,2,3,4]
+```
+
+
+
+
+
+## 86. Iterate odd numbers with a for loop
+
+```js
+var myArray = []
+
+for(var i=0; i<5; i+= 2){
+    myArray.push(i)
+}
+
+console.log(myArray)
+// 每次递增 2 ， 不会超过 5
+// output => myArray = [0,2,4]
+
+```
+
+
+
+
+
+## 87 . Count  Backwards with a for Loop
+
+```js
+var myArray = []
+
+for(var i=10; i>0; i-= 2){
+    myArray.push(i)
+}
+
+console.log(myArray)
+
+
+// output => myArray = [10,8,6,4,2]
+```
+
+
+
+
+
+## 88. Iterate  Through an Array with a for Loop
+
+**通过 for loop 和 length 方法 遍历数组 **
+
+```js
+var myArr = [9,10,11,12];
+var myTotal = 0;
+
+for (var i = 0 ; i < myArr.length; i++){
+    myTotal += myArr[i];
+}
+
+console.log(myTotal)
+ 
+
+
+// output => 42
+```
+
+
+
+## 89.Nasting for loops
+
+```js
+function multiplyAll(arr){
+    var product  =1;
+
+
+    for (var i = 0; i < arr.length; i++ )
+    {
+        for(var j=0; j<arr[i].length; j++)
+        {
+            product *= arr[i][j]
+        }
+    }
+    return product;
+}
+
+var product = multiplyAll([[1,2],[3,4],[5,6,7]]);
+
+console.log(product);
+
+
+// output => 5040
+```
+
+
+
+
+
+
+
+## 90. Iterate with Do ... while Loops
+
+while loops check the conditions  before  run the code in the loop
+
+do while loops will always run at least once time 
+
+and then it will check the condition
+
+```js
+var myArray = [];
+
+var i = 10;
+
+do{
+    myArray.push(i);
+    i++;
+} while (i < 5)
+
+console.log(i,myArray);
+
+
+
+
+// output =>  11 [ 10 ]
 ```
 
