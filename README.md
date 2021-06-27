@@ -2564,3 +2564,93 @@ console.log(i,myArray);
 // output =>  11 [ 10 ]
 ```
 
+
+
+
+
+## 91.  random Whole Number
+
+```js
+var randomNumberBetter0And19 = Math.floor(Math.random() * 20);
+
+function randomWholeNum(){
+
+
+    return Math.floor(Math.random() * 10);
+}
+
+for(var i = 0; i < 5; i++){
+    console.log(randomWholeNum());
+}
+
+
+// output => 
+// 5 
+// 9
+// 6
+// 0
+// 4
+```
+
+
+
+
+
+## 92. Create Random Whole numbers with in a Range
+
+```js
+function ourRandomRange(ourMin,ourMax){
+    return Math.floor(Math.random()*(ourMax - ourMin +1)) + ourMin;
+}
+for (var i = 0; i<15 ; i++){
+    console.log(ourRandomRange(1,9));
+}
+```
+
+```
+5
+6
+3
+4
+4
+6
+7
+6
+2
+1
+9
+9
+3
+5
+3
+```
+
+
+
+
+
+## 93. Use convert To Integer
+
+```js
+function converToInteger(str)
+{
+    return parseInt(str)
+}
+console.log(converToInteger("10011"));
+
+
+10011
+```
+
+##  
+
+
+
+
+
+## 94. Use the parseInt function with a Radix
+
+```
+
+```
+
