@@ -2639,7 +2639,7 @@ function converToInteger(str)
 console.log(converToInteger("10011"));
 
 
-10011
+10011 
 ```
 
 ##  
@@ -2650,7 +2650,106 @@ console.log(converToInteger("10011"));
 
 ## 94. Use the parseInt function with a Radix
 
+**Radix refers to the base of the  number  such as  base 2 which is binary, the default is base 10 **
+
+二进制转换为十进制
+
+```js
+function convertToInteger(str)
+{
+    return parseInt(str,2)
+}
+
+console.log(convertToInteger("10011"));
+
+
+
+
+19
 ```
 
+
+
+
+
+## 95. Use the  Conditional ( Ternary ) operator
+
+* 替换 if else 更简洁
+
+```
+condition ? statement-if-true :  statement-if-false
+```
+
+
+
+```js
+function checkEqual(a,b){
+    return (a===b ? true :false);
+}
+
+console.log(checkEqual());
+
+
+
+
+true
+```
+
+
+
+
+
+
+
+## 96. Use Multiple Conditional (Ternary) Operators
+
+
+
+```js
+function checkSign(num){
+    return num>0 ? "positive" : num < 0 ? "negative" : "zero";
+}
+
+console.log(checkSign(10));
+
+
+
+
+output =>
+positive
+
+```
+
+
+
+
+
+## 97. Differences Between the var and let keywords
+
+
+
+**ES6 => we can use `let`**
+
+`let ` not let you declare a variable  twice 
+
+```js
+var aaa= "this is var";
+var aaa= "this is a seconf var";
+
+let bbb= "this is let";
+let bbb= "this is a seconf let";
+
+console.log(aaa);
+console.log(bbb);
+
+```
+
+
+
+```
+let bbb= "this is a seconf let";
+    ^
+
+SyntaxError: Identifier 'bbb' has already been declared
 ```
 
