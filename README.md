@@ -2753,3 +2753,132 @@ let bbb= "this is a seconf let";
 SyntaxError: Identifier 'bbb' has already been declared
 ```
 
+
+
+## 98 Strict Mode 
+
+```js
+'use strict'; // => Now, the entire script was in the strict Mode
+
+
+// you can also put strict mode in a individual function by putting
+// 'use strict'; in the first line of a function
+function print()
+{
+   'use strict';
+    var x = 3.14;
+}
+print();
+
+
+
+// Strict Mode would turn the warning INTO Error
+//  IN normal JavaScriprt , when you mistypoing a variable name, it will turn
+//  the local variable into the Gloabal  variable, it still can be run
+//  BUT in the strict mode, that is a error;
+// EXAMPLE ：
+
+function strictMode(){
+    bbb = "I am bbb";
+    console.log(bbb);
+}
+
+strictMode();
+
+```
+
+```
+    bbb = "I am bbb";
+        ^
+
+ReferenceError: bbb is not defined
+```
+
+
+
+
+
+
+
+##  99 . Compare Scopes of the  `var ` and `let ` kry word
+
+ 
+
+**another difference between `var` and `let` is **
+
+**When you declare a  variable with `var` it is declared  globally Or  locally  in a function  **
+
+**`let`   is  the scope of limited to the block statement or expression that it was declared in **
+
+ 
+
+```js
+function checkScope(){
+    "use strict";
+
+    var i = "function scope";
+    if (true){
+         i  = "block scope";
+        console.log("Block scope i is : ", i);
+    }
+        console.log("function scope i is : ", i);
+    return  i;
+}
+
+
+
+// Block scope i is :  block scope
+// function scope i is :  block scope
+```
+
+
+
+```js
+function checkScope(){
+    "use strict";
+
+    let i = "function scope";
+    if (true){
+        let i  = "block scope";
+        console.log("Block scope i is : ", i);
+    }
+        console.log("function scope i is : ", i);
+    return  i;
+}
+
+checkScope();
+
+
+// Block scope i is :  block scope
+// function scope i is :  function scope
+```
+
+
+
+# 100. Declare a Read-only Variable with the const Keyword
+
+**const is anther way to declare a variable , It have all the feature `let` have , BUT  it is Read-ONLY **
+
+**you can not ressign a const**
+
+```js
+function printManyTimes(str){
+        "use strict";
+        // var sentence = str + "is cool";
+        const sentence = str + "is cool";
+        sentence  = str + " is amazing !";
+
+        for (var i =0 ; i< str.length ; i+=2){
+                console.log(sentence);
+        }
+
+}
+```
+
+```
+   sentence  = str + " is amazing !";
+                  ^
+
+TypeError: Assignment to constant variable.
+```
+
