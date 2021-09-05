@@ -48,7 +48,7 @@ comments are lines of code that javascript will intertionally ignore.
 
 * JavaScript provide 7 data types you can use in javascript 
   * undefined : 已经定义了，但没有被初时化
-  * null： you set it to be something but the thing si nothing
+  * null： you set it to be something but the thing is nothing
   * boolean：true / false
   * string: 字符串
   * symbol：a symbol  is an immutable primitive value that is unique  独特的不变的原始数据
