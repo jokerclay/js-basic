@@ -217,7 +217,6 @@ var quotient = 66/33;
 自增
 
 ```js
-
 var Myvar = 87;
 
 Myvar = Myvar +1;
@@ -245,7 +244,6 @@ Myvar--；
 ## 13. Decimal Numbers
 
 ```js
-
 var  myDecimal = 0.009; 
 ```
 
@@ -258,7 +256,6 @@ var  myDecimal = 0.009;
 
 
 ```js
-
 var prodect = 2.5 * 2
 console.log(prodect)
 ```
@@ -492,7 +489,6 @@ ThirdLine
 
 
 ```js
-
 var mystr = "This is the start."+"This is the end";
 console.log(mystr);
 // =>This is the start.This is the end
@@ -633,18 +629,7 @@ console.log(mystr);
 ## 32.Bracket Notation to Find Nth character in String
 
 ```js
-───────┬───────────────────────────────────────────────────────────────
-       │ File: 5.js
-───────┼───────────────────────────────────────────────────────────────
-   1   │ var mystr = "字符串1"
-   2   │
-   3   │ console.log(mystr[3]);
-   4   │ // the output will be 1
-───────┴───────────────────────────────────────────────────────────────
-
-
-// output =>
-// 1
+───────┬───────────────────────────────────────────────────────────────       │ File: 5.js───────┼───────────────────────────────────────────────────────────────   1   │ var mystr = "字符串1"   2   │   3   │ console.log(mystr[3]);   4   │ // the output will be 1───────┴───────────────────────────────────────────────────────────────// output =>// 1
 ```
 
 
@@ -726,12 +711,7 @@ The bike solw flew solwly to the store .
 ## 35. Store Multiple Values with Arrays
 
 ```js
-var myArray = ["Quincy",1]
-
-console.log(myArray)
-
-// output =>
-[ 'Quincy', 1 ]
+var myArray = ["Quincy",1]console.log(myArray)// output =>[ 'Quincy', 1 ]
 ```
 
 
@@ -745,13 +725,7 @@ console.log(myArray)
 
 
 ```js
-var myArray = [["clay liu",21],["jane sox"],32];
-
-console.log(myArray);
-
-// output =>
-[ [ 'clay liu', 21 ], [ 'jane sox' ], 32 ]
-
+var myArray = [["clay liu",21],["jane sox"],32];console.log(myArray);// output =>[ [ 'clay liu', 21 ], [ 'jane sox' ], 32 ]
 ```
 
 
@@ -829,17 +803,7 @@ console.log(myArray);
 ## 38. Manpulate Arrays with push()
 
 ```js
-~~>:~/test $ bat 12.js
-───────┬─────────────────────────────────────────────────────
-       │ File: 12.js
-───────┼─────────────────────────────────────────────────────
-   1   │ var myArray = [["john",23],["clay",21]];
-   2   │ myArray.push(["cc",26]);
-   3   │
-   4   │ console.log(myArray);
-───────┴─────────────────────────────────────────────────────
-~~>:~/test $ nodejs 12.js
-[ [ 'john', 23 ], [ 'clay', 21 ], [ 'cc', 26 ] ]
+~~>:~/test $ bat 12.js───────┬─────────────────────────────────────────────────────       │ File: 12.js───────┼─────────────────────────────────────────────────────   1   │ var myArray = [["john",23],["clay",21]];   2   │ myArray.push(["cc",26]);   3   │   4   │ console.log(myArray);───────┴─────────────────────────────────────────────────────~~>:~/test $ nodejs 12.js[ [ 'john', 23 ], [ 'clay', 21 ], [ 'cc', 26 ] ]
 ```
 
 
@@ -851,18 +815,7 @@ console.log(myArray);
  
 
 ```js
-~~>:~/test $ bat pop.js
-───────┬─────────────────────────────────────────────────────
-       │ File: pop.js
-───────┼─────────────────────────────────────────────────────
-   1   │ var myArray = [["john",23],["clay",21]];
-   2   │ myArray.pop();
-   3   │
-   4   │ console.log(myArray);
-───────┴─────────────────────────────────────────────────────
-~~>:~/test $ nodejs pop.js
-[ [ 'john', 23 ] ]
-~~>:~/test $
+~~>:~/test $ bat pop.js───────┬─────────────────────────────────────────────────────       │ File: pop.js───────┼─────────────────────────────────────────────────────   1   │ var myArray = [["john",23],["clay",21]];   2   │ myArray.pop();   3   │   4   │ console.log(myArray);───────┴─────────────────────────────────────────────────────~~>:~/test $ nodejs pop.js[ [ 'john', 23 ] ]~~>:~/test $
 ```
 
 
@@ -872,17 +825,7 @@ console.log(myArray);
 
 
 ```js
- ~~>:~/test $ bat shitf.js
-───────┬─────────────────────────────────────────────────────
-       │ File: shitf.js
-───────┼─────────────────────────────────────────────────────
-   1   │ var myArray = [["john",23],["clay",21]];
-   2   │ myArray.shift();
-   3   │
-   4   │ console.log(myArray);
-───────┴─────────────────────────────────────────────────────
-~~>:~/test $ nodejs shitf.js
-[ [ 'clay', 21 ] ]
+ ~~>:~/test $ bat shitf.js───────┬─────────────────────────────────────────────────────       │ File: shitf.js───────┼─────────────────────────────────────────────────────   1   │ var myArray = [["john",23],["clay",21]];   2   │ myArray.shift();   3   │   4   │ console.log(myArray);───────┴─────────────────────────────────────────────────────~~>:~/test $ nodejs shitf.js[ [ 'clay', 21 ] ]
 ```
 
 
@@ -894,17 +837,7 @@ console.log(myArray);
 
 
 ```js
-~~>:~/test $ bat unshift.js
-───────┬─────────────────────────────────────────────────────
-       │ File: unshift.js
-───────┼─────────────────────────────────────────────────────
-   1   │ var myArray = [["john",23],["clay",21]];
-   2   │ myArray.unshift("Hello world");
-   3   │
-   4   │ console.log(myArray);
-───────┴─────────────────────────────────────────────────────
-~~>:~/test $ nodejs unshift.js
-[ 'Hello world', [ 'john', 23 ], [ 'clay', 21 ] ]
+~~>:~/test $ bat unshift.js───────┬─────────────────────────────────────────────────────       │ File: unshift.js───────┼─────────────────────────────────────────────────────   1   │ var myArray = [["john",23],["clay",21]];   2   │ myArray.unshift("Hello world");   3   │   4   │ console.log(myArray);───────┴─────────────────────────────────────────────────────~~>:~/test $ nodejs unshift.js[ 'Hello world', [ 'john', 23 ], [ 'clay', 21 ] ]
 ```
 
 
@@ -912,26 +845,7 @@ console.log(myArray);
 ## 43. Shoping List
 
 ```js
-~~>:~/test $ bat shopList.js
-───────┬─────────────────────────────────────────────────────
-       │ File: shopList.js
-───────┼─────────────────────────────────────────────────────
-   1   │ var mylist =[ ["cereal",3],["milk",2],["banana",3],
-   2   │     ["juice",2],
-   3   │     ["eggs",4],
-   4   │ ]
-   5   │
-   6   │ console.log(mylist)
-   7   │ console.log(mylist.length)
-───────┴─────────────────────────────────────────────────────
-~~>:~/test $ nodejs shopList.js
-[ [ 'cereal', 3 ],
-  [ 'milk', 2 ],
-  [ 'banana', 3 ],
-  [ 'juice', 2 ],
-  [ 'eggs', 4 ] ]
-5
-~~>:~/test $
+~~>:~/test $ bat shopList.js───────┬─────────────────────────────────────────────────────       │ File: shopList.js───────┼─────────────────────────────────────────────────────   1   │ var mylist =[ ["cereal",3],["milk",2],["banana",3],   2   │     ["juice",2],   3   │     ["eggs",4],   4   │ ]   5   │   6   │ console.log(mylist)   7   │ console.log(mylist.length)───────┴─────────────────────────────────────────────────────~~>:~/test $ nodejs shopList.js[ [ 'cereal', 3 ],  [ 'milk', 2 ],  [ 'banana', 3 ],  [ 'juice', 2 ],  [ 'eggs', 4 ] ]5~~>:~/test $
 ```
 
 
@@ -941,24 +855,7 @@ console.log(myArray);
 ## 44. With Reuseable code with function
 
 ```js
-~~>:~/test $ bat func.js
-───────┬─────────────────────────────────────────────────────────
-       │ File: func.js
-───────┼─────────────────────────────────────────────────────────
-   1   │ function reuseablefunction ()
-   2   │ {
-   3   │     console.log("heyy world ~~")
-   4   │ }
-   5   │ reuseablefunction();
-   6   │ reuseablefunction();
-   7   │ reuseablefunction();
-   8   │ reuseablefunction();
-───────┴─────────────────────────────────────────────────────────
-~~>:~/test $ nodejs func.js
-heyy world ~~
-heyy world ~~
-heyy world ~~
-heyy world ~~
+~~>:~/test $ bat func.js───────┬─────────────────────────────────────────────────────────       │ File: func.js───────┼─────────────────────────────────────────────────────────   1   │ function reuseablefunction ()   2   │ {   3   │     console.log("heyy world ~~")   4   │ }   5   │ reuseablefunction();   6   │ reuseablefunction();   7   │ reuseablefunction();   8   │ reuseablefunction();───────┴─────────────────────────────────────────────────────────~~>:~/test $ nodejs func.jsheyy world ~~heyy world ~~heyy world ~~heyy world ~~
 ```
 
 
@@ -1049,25 +946,7 @@ oopsGlobal:  5
 **That means they're only visible from within the function**
 
 ```js
-~~>:~/test $ bat localVariable.js
-───────┬─────────────────────────────────────────────────────────
-       │ File: localVariable.js
-───────┼─────────────────────────────────────────────────────────
-   1   │ function myLocalScope()
-   2   │ {
-   3   │     var myVar = 5;
-   4   │     console.log(myVar);
-   5   │ }
-   6   │ myLocalScope();
-   7   │ console.log(myVar);
-───────┴─────────────────────────────────────────────────────────
-~~>:~/test $ nodejs localVariable.js
-5
-/home/pi/test/localVariable.js:7
-console.log(myVar);
-            ^
-
-ReferenceError: myVar is not defined
+~~>:~/test $ bat localVariable.js───────┬─────────────────────────────────────────────────────────       │ File: localVariable.js───────┼─────────────────────────────────────────────────────────   1   │ function myLocalScope()   2   │ {   3   │     var myVar = 5;   4   │     console.log(myVar);   5   │ }   6   │ myLocalScope();   7   │ console.log(myVar);───────┴─────────────────────────────────────────────────────────~~>:~/test $ nodejs localVariable.js5/home/pi/test/localVariable.js:7console.log(myVar);            ^ReferenceError: myVar is not defined
 ```
 
 
@@ -1079,27 +958,7 @@ ReferenceError: myVar is not defined
 **it is possiable to have both loacal and global variables with the same name **
 
 ```js
-~~>:~/test $ bat g-l-scope.js
-───────┬─────────────────────────────────────────────────────────
-       │ File: g-l-scope.js
-───────┼─────────────────────────────────────────────────────────
-   1   │ var outerWear = "T-shirt";
-   2   │
-   3   │ function myOutFit()
-   4   │ {
-   5   │     var outerWear = "sweater";
-   6   │
-   7   │     return outerWear;
-   8   │ }
-   9   │
-  10   │ console.log(myOutFit());
-  11   │ console.log(outerWear);
-  12   │
-───────┴─────────────────────────────────────────────────────────
-~~>:~/test $ nodejs g-l-scope.js
-sweater
-T-shirt
-~~>:~/test $
+~~>:~/test $ bat g-l-scope.js───────┬─────────────────────────────────────────────────────────       │ File: g-l-scope.js───────┼─────────────────────────────────────────────────────────   1   │ var outerWear = "T-shirt";   2   │   3   │ function myOutFit()   4   │ {   5   │     var outerWear = "sweater";   6   │   7   │     return outerWear;   8   │ }   9   │  10   │ console.log(myOutFit());  11   │ console.log(outerWear);  12   │───────┴─────────────────────────────────────────────────────────~~>:~/test $ nodejs g-l-scope.jssweaterT-shirt~~>:~/test $
 ```
 
 
@@ -1164,23 +1023,7 @@ Yes, it's true
 ## 52. Comparison with the Equality Operator
 
 ```js
-~~>:~/test $ bat equal.js
-───────┬──────────────────────────────────────────────────────────────
-       │ File: equal.js
-───────┼──────────────────────────────────────────────────────────────
-   1   │ function testEqual(val)
-   2   │ {
-   3   │     if (val == 12)
-   4   │     {
-   5   │         return "Equal";
-   6   │     }
-   7   │     return "Not Equal"
-   8   │ }
-   9   │
-  10   │ console.log(testEqual(10));
-───────┴──────────────────────────────────────────────────────────────
-~~>:~/test $ nodejs equal.js
-Not Equal
+~~>:~/test $ bat equal.js───────┬──────────────────────────────────────────────────────────────       │ File: equal.js───────┼──────────────────────────────────────────────────────────────   1   │ function testEqual(val)   2   │ {   3   │     if (val == 12)   4   │     {   5   │         return "Equal";   6   │     }   7   │     return "Not Equal"   8   │ }   9   │  10   │ console.log(testEqual(10));───────┴──────────────────────────────────────────────────────────────~~>:~/test $ nodejs equal.jsNot Equal
 ```
 
 
@@ -1199,8 +1042,7 @@ Not Equal
     **the strict equality operator does not do the type conversion**
 
     ```
-    3 == 3			// => true
-    3 === ‘3’		// => flase
+    3 == 3			// => true3 === ‘3’		// => flase
     ```
 
   ```js
@@ -1256,16 +1098,7 @@ Not Equal
 ## 55. Comparison with the Strict Inequality Operator
 
 ```js
-function testStrictNotEqual(val)
-{
-        if (val !== 17)
-        {
-                return "Not equal"
-        }
-
-        return "Equal"
-}
-console.log(testStrictNotEqual("17"));
+function testStrictNotEqual(val){        if (val !== 17)        {                return "Not equal"        }        return "Equal"}console.log(testStrictNotEqual("17"));
 ```
 
 
@@ -1283,27 +1116,7 @@ Not equal
 ## 56. Comparison with the Logical and Operator
 
 ```js
-───────┬──────────────────────────────────────────────────────────────
-       │ File: greater.js
-───────┼──────────────────────────────────────────────────────────────
-   1   │ function testGreaterThan(val)
-   2   │ {
-   3   │     if (val > 100 )
-   4   │     {
-   5   │         return "over 100";
-   6   │     }
-   7   │     if(val > 10)
-   8   │     {
-   9   │         return "over 10";
-  10   │     }
-  11   │
-  12   │     return "10 or under"
-  13   │ }
-  14   │
-  15   │ console.log(testGreaterThan(10))
-───────┴──────────────────────────────────────────────────────────────
-~~>:~/test $ nodejs greater.js
-10 or under
+───────┬──────────────────────────────────────────────────────────────       │ File: greater.js───────┼──────────────────────────────────────────────────────────────   1   │ function testGreaterThan(val)   2   │ {   3   │     if (val > 100 )   4   │     {   5   │         return "over 100";   6   │     }   7   │     if(val > 10)   8   │     {   9   │         return "over 10";  10   │     }  11   │  12   │     return "10 or under"  13   │ }  14   │  15   │ console.log(testGreaterThan(10))───────┴──────────────────────────────────────────────────────────────~~>:~/test $ nodejs greater.js10 or under
 ```
 
 
@@ -1313,28 +1126,7 @@ Not equal
 ## 57 . Comparison with the Greater Than Or Equal to  Operator
 
 ```js
-~~>:~/test $ bat greaterOrEqual.js
-───────┬──────────────────────────────────────────────────────────────
-       │ File: greaterOrEqual.js
-───────┼──────────────────────────────────────────────────────────────
-`   1   │ function testGreaterThanOrEqual(val)`
-   2   │ {
-   3   │     if (val >= 20 )
-   4   │     {
-   5   │         return "20 or over ";
-   6   │     }
-   7   │     if(val >=10)
-   8   │     {
-   9   │         return "10 or over ";
-  10   │     }
-  11   │
-  12   │     return " Less than 10"
-  13   │ }
-  14   │
-  15   │ console.log(testGreaterThanOrEqual(10))
-───────┴──────────────────────────────────────────────────────────────
-~~>:~/test $ nodejs  greaterOrEqual.js
-10 or over
+~~>:~/test $ bat greaterOrEqual.js───────┬──────────────────────────────────────────────────────────────       │ File: greaterOrEqual.js───────┼──────────────────────────────────────────────────────────────`   1   │ function testGreaterThanOrEqual(val)`   2   │ {   3   │     if (val >= 20 )   4   │     {   5   │         return "20 or over ";   6   │     }   7   │     if(val >=10)   8   │     {   9   │         return "10 or over ";  10   │     }  11   │  12   │     return " Less than 10"  13   │ }  14   │  15   │ console.log(testGreaterThanOrEqual(10))───────┴──────────────────────────────────────────────────────────────~~>:~/test $ nodejs  greaterOrEqual.js10 or over
 ```
 
 
@@ -1402,20 +1194,7 @@ console.log(testLessOrEqual(10))
 ## 60. Comparisons with the Logical And operator
 
 ```js
-function testLogicalAnd(val)
-{
-    if(val <= 50 && val >=25)		// both of it must be true 
-    {
-        return "Yes";
-    }
-        return "No";
-}
-
-console.log(testLogicalAnd(30))
-
-
-// output =>
-// Yes
+function testLogicalAnd(val){    if(val <= 50 && val >=25)		// both of it must be true     {        return "Yes";    }        return "No";}console.log(testLogicalAnd(30))// output =>// Yes
 ```
 
 
@@ -1427,20 +1206,7 @@ console.log(testLogicalAnd(30))
 ## 61. Comparisons with the Logical Or operator
 
 ```js
-function testLogicalAnd(val)
-{
-    if(val > 50 ||  val <25)
-    {
-        return "Yes";
-    }
-        return "No";
-}
-
-console.log(testLogicalAnd(30))
-
-
-// output =>
-// No
+function testLogicalAnd(val){    if(val > 50 ||  val <25)    {        return "Yes";    }        return "No";}console.log(testLogicalAnd(30))// output =>// No
 ```
 
 
@@ -1512,61 +1278,13 @@ testLogicalAnd(6)
 ## 64. Logical Oreder in If else Statements
 
 ```js
-function testLogicalAnd(val)
-{
-    var result = "";
-
-    if(val < 10)
-    {
-        result = "Less than 10"
-    }
-    else if(val < 5)
-    {
-        result = "Less than 5"
-    }
-    else
-    {
-        result = "Greater ot eequal to 10";
-    }
-    console.log(result);
-}
-
-testLogicalAnd(3)
-
-
-
-// output =>
-// Less than 10
+function testLogicalAnd(val){    var result = "";    if(val < 10)    {        result = "Less than 10"    }    else if(val < 5)    {        result = "Less than 5"    }    else    {        result = "Greater ot eequal to 10";    }    console.log(result);}testLogicalAnd(3)// output =>// Less than 10
 ```
 
 **SO the order is matter , when you use else if  you  should thing about the order **
 
 ```js
-function testLogicalAnd(val)
-{
-    var result = "";
-
-    if(val < 5)
-    {
-        result = "Less than 5"
-    }
-    else if(val < 10)
-    {
-        result = "Less than 10"
-    }
-    else
-    {
-        result = "Greater ot eequal to 10";
-    }
-    console.log(result);
-}
-
-testLogicalAnd(3)
-
-
-
-// output =>
-// Less than 5
+function testLogicalAnd(val){    var result = "";    if(val < 5)    {        result = "Less than 5"    }    else if(val < 10)    {        result = "Less than 10"    }    else    {        result = "Greater ot eequal to 10";    }    console.log(result);}testLogicalAnd(3)// output =>// Less than 5
 ```
 
 
@@ -1663,34 +1381,7 @@ console.log(golfScore(5,4));
 
 
 ```js
-function switchState(val)
-{
-switch(val)
-{
-    case "1":
-    console.log( "number 1")
-    break;
-    case "2":
-    console.log( "number 2")
-    break;
-    case "3":
-    console.log( "number 3")
-    break;
-    case "4":
-    console.log( "number 4")
-    break;
-        default:
-        console.log("Not Included")
-}
-
-}
-
-switchState("9")
-
-
-
-// output =>
-// Not Included
+function switchState(val){switch(val){    case "1":    console.log( "number 1")    break;    case "2":    console.log( "number 2")    break;    case "3":    console.log( "number 3")    break;    case "4":    console.log( "number 4")    break;        default:        console.log("Not Included")}}switchState("9")// output =>// Not Included
 ```
 
 
@@ -1794,47 +1485,7 @@ console.log(abTest(-2,2));
 ## 70. Counting Cards
 
 ```js
-var count = 0;
-
-function cc(card)
-{
-    switch(card)
-    {
-        case 2:
-        case 3:
-        case 4:
-        case 5:
-        case 6:
-            count++;
-            break;
-        case 10:
-        case "J":
-        case "Q":
-        case "K":
-        case "A":
-            count--;
-            break;
-    }
-    var holdbet = "Hold"
-    if(count > 0)
-    {
-        holdbet = "Bet"
-    }
-
-    return count + " " + holdbet;
-}
-
-
-cc(2);
-cc('K');
-cc(10);
-cc('K');
-cc('A');
-console.log(cc(4));
-
-
-// output =>
-// -2 Hold
+var count = 0;function cc(card){    switch(card)    {        case 2:        case 3:        case 4:        case 5:        case 6:            count++;            break;        case 10:        case "J":        case "Q":        case "K":        case "A":            count--;            break;    }    var holdbet = "Hold"    if(count > 0)    {        holdbet = "Bet"    }    return count + " " + holdbet;}cc(2);cc('K');cc(10);cc('K');cc('A');console.log(cc(4));// output =>// -2 Hold
 ```
 
 
@@ -1902,7 +1553,7 @@ there two ways to access object property
 
   
 
-*  Bracket Notation
+* Bracket Notation
 
   **you can use Bracket Notation anytime, But it required when the property name have space **
 
@@ -2189,22 +1840,7 @@ console.log(myMusic)
 ```
 
 ```
-output
-[
-  {
-    artist: 'Billy Joel',
-    title: 'Piano Man',
-    release_year: 1973,
-    formats: [ 'CD', '8T', 'LP' ],
-    gold: true
-  },
-  {
-    artist: 'Beau Carnes',
-    title: 'Cereal Man',
-    release_year: 2003,
-    formats: [ 'Youtube video' ]
-  }
-]
+output[  {    artist: 'Billy Joel',    title: 'Piano Man',    release_year: 1973,    formats: [ 'CD', '8T', 'LP' ],    gold: true  },  {    artist: 'Beau Carnes',    title: 'Cereal Man',    release_year: 2003,    formats: [ 'Youtube video' ]  }]
 ```
 
 
@@ -2510,26 +2146,7 @@ console.log(myTotal)
 ## 89.Nasting for loops
 
 ```js
-function multiplyAll(arr){
-    var product  =1;
-
-
-    for (var i = 0; i < arr.length; i++ )
-    {
-        for(var j=0; j<arr[i].length; j++)
-        {
-            product *= arr[i][j]
-        }
-    }
-    return product;
-}
-
-var product = multiplyAll([[1,2],[3,4],[5,6,7]]);
-
-console.log(product);
-
-
-// output => 5040
+function multiplyAll(arr){    var product  =1;    for (var i = 0; i < arr.length; i++ )    {        for(var j=0; j<arr[i].length; j++)        {            product *= arr[i][j]        }    }    return product;}var product = multiplyAll([[1,2],[3,4],[5,6,7]]);console.log(product);// output => 5040
 ```
 
 
@@ -2547,21 +2164,7 @@ do while loops will always run at least once time
 and then it will check the condition
 
 ```js
-var myArray = [];
-
-var i = 10;
-
-do{
-    myArray.push(i);
-    i++;
-} while (i < 5)
-
-console.log(i,myArray);
-
-
-
-
-// output =>  11 [ 10 ]
+var myArray = [];var i = 10;do{    myArray.push(i);    i++;} while (i < 5)console.log(i,myArray);// output =>  11 [ 10 ]
 ```
 
 
@@ -2571,25 +2174,7 @@ console.log(i,myArray);
 ## 91.  random Whole Number
 
 ```js
-var randomNumberBetter0And19 = Math.floor(Math.random() * 20);
-
-function randomWholeNum(){
-
-
-    return Math.floor(Math.random() * 10);
-}
-
-for(var i = 0; i < 5; i++){
-    console.log(randomWholeNum());
-}
-
-
-// output => 
-// 5 
-// 9
-// 6
-// 0
-// 4
+var randomNumberBetter0And19 = Math.floor(Math.random() * 20);function randomWholeNum(){    return Math.floor(Math.random() * 10);}for(var i = 0; i < 5; i++){    console.log(randomWholeNum());}// output => // 5 // 9// 6// 0// 4
 ```
 
 
@@ -2599,12 +2184,7 @@ for(var i = 0; i < 5; i++){
 ## 92. Create Random Whole numbers with in a Range
 
 ```js
-function ourRandomRange(ourMin,ourMax){
-    return Math.floor(Math.random()*(ourMax - ourMin +1)) + ourMin;
-}
-for (var i = 0; i<15 ; i++){
-    console.log(ourRandomRange(1,9));
-}
+function ourRandomRange(ourMin,ourMax){    return Math.floor(Math.random()*(ourMax - ourMin +1)) + ourMin;}for (var i = 0; i<15 ; i++){    console.log(ourRandomRange(1,9));}
 ```
 
 ```
@@ -2863,6 +2443,7 @@ checkScope();
 
 ```js
 function printManyTimes(str){
+    	// 严格模式
         "use strict";
         // var sentence = str + "is cool";
         const sentence = str + "is cool";
@@ -2881,4 +2462,483 @@ function printManyTimes(str){
 
 TypeError: Assignment to constant variable.
 ```
+
+
+
+* **you should  mainly use `let` and `const`   in  your code **
+* **when you use `const` you want use capital letter as the variable name**
+
+
+
+
+
+
+
+# 101. Mutate an array Declared  with  const
+
+**you can not  reassign a variable declare with `const`  **
+
+**you can mutate an array**
+
+```js
+const s = [1,2,3];
+function editInplace(){
+    "use strict"
+
+    // s = [4,5,6]
+    s[0] = 4;
+    s[1] = 5;
+    s[2] = 6;
+    console.log(s)
+}
+editInplace();
+//  const 声明的 数组不能对其直接赋值，但可以根据下标 对其重新赋值
+```
+
+
+
+
+
+# 102. Prevent Object mutation 
+
+a const alone can not protect your data from mutation 
+
+if you  have a object or a array, you can still mutate it even if it's declared with const
+
+thereis something called objec,freeze that will  prevent data mutation.
+
+**object.freeze**
+
+```js
+function freezeObj(){
+// 严格模式
+  "use strict";
+    // 数学常量对象
+  const MATH_CONSTANTS = {
+        PI : 3.1415936
+ };
+
+try {
+    MATH_CONSTANTS.PI = 99
+}
+catch (ex){
+    console.log(ex)
+}
+return MATH_CONSTANTS.PI;
+};
+const PI = freezeObj();
+console.log(PI);
+
+// 结果 => 99 , const 声明的常量会被改变
+```
+
+**使用 object.freeeze  来保护， const 声明的 对象 不会被改变 **
+
+```js
+function freezeObj(){
+  "use strict";
+  const MATH_CONSTANTS = {
+        PI : 3.1415936
+ };
+// the following line of code  prevent constant MATH_CONSTANTS can not be changed
+    Object.freeze(MATH_CONSTANTS);
+
+
+try {
+    MATH_CONSTANTS.PI = 99
+}catch (ex){
+    console.log(ex)
+}
+    return MATH_CONSTANTS.PI;
+};
+const PI = freezeObj();
+console.log(PI);
+
+
+
+
+
+output:
+
+TypeError: Cannot assign to read only property 'PI' of object '#<Object>'
+    at Module._compile (internal/modules/cjs/loader.js:999:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)
+    at Module.load (internal/modules/cjs/loader.js:863:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:708:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)
+    at internal/main/run_main_module.js:17:47
+3.1415936
+```
+
+
+
+
+
+
+
+# 103. use Arrow Functions to write concise Anonymous Functions
+
+**this is a anonymous function, there is a variable called 'magic', but there is no name before the 'function' , so , this is a anonymous function**
+
+```js
+var magic = function()
+{
+    return new Date();
+}
+```
+
+   
+
+**any  anonymous function can convert it to arrow function **
+
+**it make it quicker to write **
+
+```js
+var magic =()=>{
+    return new Data()
+}
+```
+
+**if we only  return one value herer we can not write the keyword return and `{}`**
+
+```js
+var magic = ()=> new Date();
+console.log(magic());
+
+output=>
+node arrow_function.js                                                                        1 ⚙
+2021-09-05T08:31:10.232Z
+```
+
+# 104. write arrow functions with Parameters
+
+**just as a  normal functions that you  can pass arguments to arrow functions **
+
+```js
+var myConcat = (arr1,arr2) => {
+    return arr1.concat(arr2);
+};
+
+console.log(myConcat([1,2],[3,4,5]));
+
+
+output：
+ node arrow_function_with_parameters.js                                                        1 ⨯
+[ 1, 2, 3, 4, 5 ]
+```
+
+
+
+
+
+# 105. Write Higher Order Arrow function 
+
+**arrow function workl really well with higher order function such as filter and reduce **
+
+**whenever one function takes another function as argument , that is a good time for an arrow function **
+
+  
+
+```js
+const realNumberArray = [4,5.6,-9.8,3.14,42,6,8.34,-2];
+const squareList = (arr) =>{
+    // filter all the numbers that is not postive interger
+    // 使用 filter 函数过滤一个箭头函数表达式， num 是 参数，符合条件是 是个整数并且大于 0, 再使用 map 函数，map 函数的 参数是一个函数，x 值得是 数组中的每一个元素， 对数组中的每一个元素做 元素自身相乘的操作
+    const squareIntergers = arr.filter(num => Number.isInteger(num) && num >0).map(x => x*x );
+    return squareIntergers;
+}
+const squareIntergers = squareList(realNumberArray);
+console.log(squareIntergers);
+
+output =>
+// 未使用 map 函数
+ node higher_order_arrow_function.js
+[ 4, 42, 6 ]
+
+// 使用了 map 函数
+ node higher_order_arrow_function.js
+[ 16, 1764, 36 ]
+```
+
+
+
+
+
+**in order to create more flexible functions you can  use default parameters**
+
+**the default parameters kicks in when the argument is not specified or is undefined **
+
+```js
+const increment = (function(){
+
+    return function increment(number,value){
+
+        return number  + value;
+    };
+})();
+
+console.log(increment(5,2));
+
+
+output=>
+ node default_parameter.js                                                                     1 ⨯
+7
+```
+
+if the arguments doesn's have the ' value '  we can set a default value, it will use the  default value
+
+```js
+const increment = (function(){
+
+    return function increment(number,value =1){
+
+        return number  + value;
+    };
+})();
+
+console.log(increment(5,2));
+console.log(increment(5));
+
+output =>
+node default_parameter.js
+7
+6
+```
+
+
+
+
+
+
+
+# 106. Use the Rest Operator with Function Patameters
+
+**the reset operator allows you to create a function that takes a variable number of arguments **
+
+reset operator 可以 代替多个参数来使用
+
+**the reset operator is `...` **
+
+ 
+
+```js
+// 变量 sum 是一个函数，返回一个值，这个值是一个叫 sum 的函数返回的，
+// sum 函数 有三个参数 x,y,z
+// sum 做这样一件事,声明一个叫 args 的数组含有 xyz 三个元素，将 累加器的值初始化为0
+// 将 累加器 a 的值 和 数组 args 中 的每一个元素相加，结果赋给累加器
+const sum = ( function(){
+    return function sum(x,y,z){
+        const args = [x,y,z]
+        return args.reduce((a,b)=> a + b,0 )
+    };
+
+} )();
+console.log(sum(1,2,3));
+
+```
+
+**使用 rest operator 可以 不把 参数 限制在  x, y , z 三个参数，可以是任意多的参数**
+
+**进而实现 任意多个 参数的和**
+
+```js
+// 变量 sum 是一个函数，返回一个值，这个值是一个叫 sum 的函数返回的，
+// sum 函数 有三个参数 x,y,z
+// sum 做这样一件事,声明一个叫 args 的数组含有 xyz 三个元素，将 累加器的值初始化为0
+// 将 累加器 a 的值 和 数组 args 中 的每一个元素相加，结果赋给累加器
+const sum = ( function(){
+//    return function sum(x,y,z){
+//        const args = [x,y,z]
+    return function sum(...args){
+        return args.reduce((a,b)=> a + b,0 )
+    };
+
+} )();
+console.log(sum(1,2,3,3,4,534,5,53,543,));
+
+
+output =>
+node reset.js
+1148
+```
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+# 107. reduce
+
+* we have a array of number, we want to calculate the sum of all the number in the array
+
+  ```js
+   // 应用场景想 购物车中的 每一件商品价格之和
+  
+  // 比较传统的做法-----------------------------
+  // let sum = 0;
+  // for(let i = 0; i<numbers.length;i++)
+  // {
+  //    sum = sum + numbers[i]
+  // }
+  // console.log(sum);
+  
+  // 或者
+  // for (let n of numbers)
+  //    sum +=n;
+  
+  
+  // 更简洁更优雅的写法-----------------------------
+  // 使用 reduce 方法
+  
+  // reduce 有两个参数，
+  // 一个是 callback (回调函数),该回调函数包含两个参数，accumulator(累加器),和 currentValue
+  // accumulator 是   ，currentValue 是数组中 依次 的每一个元素
+  // 一个是 accumulator 的初始值
+  const sum = numbers.reduce((accumulator,currentValue)=>{
+      return accumulator + currentValue
+  
+  },0)
+  
+  
+  // 如果 accumulator 没有被赋值，就会默认是 数组的第一个元素的值
+  // 这个例子就会变成
+  // a = 1 , c = -1, a = a + c = 0;
+  // a = 0 , c = 2 ...
+  console.log(sum)
+  
+  // 最优雅的写法
+  //
+  // const sum = numbers.reduce((accumulator,currentValue)=> accumulator + currentValue);
+  
+  ```
+
+  
+
+
+
+
+
+# 108. use the **Spread Operator** to Evaluate Arrays In-place
+
+
+
+**the spread opeartor just like the  rest operator  ** three dots `...`
+
+**but it expands an already existing array Or spreads out an array**
+
+**it takes a array and spreads it out into it's indivdual parts**
+
+```js
+const arr1 = [ 'JAN','FEB','MAR','APR','MAY'];
+let arr2 = [ '1','2','3','4','5'];
+console.log("array 2 is " + arr2);
+// let arr2;
+(function(){
+    arr2 = [...arr1];		// 将数组 arr1 中的内容全部复制到 arr2 中，arr2 中的元素被覆盖，多余的数组元素也会被移除，当使用 分离操作符时，相当于数组的 复制	
+    arr1[0] = 'photo';
+
+})();
+console.log("array 2 is " + arr2);
+// console.log(arr2);
+
+output =>
+ node spreadOperator.js
+array 2 is 1,2,3,4,5
+array 2 is JAN,FEB,MAR,APR,MAY
+```
+
+
+
+
+
+# 109. Use Destructuring Assignment to Assign Variable from Objects
+
+```js
+var voxel = { x : 3.36, y : 7.4,  z:6.54 };
+// 如果我们想 获取 这个对象的 每一个 元素 并赋给一个元素
+// 传统方法
+var x = voxel.x; // x =3.36
+var y = voxel.y; // y = 7.4
+var z = voxel.z; // z = 6.54
+
+// 更加简便的方法
+// 创建 a b c , 三个变量，并将 对象 voxel 中的元素 x y z 的值分别赋给他们
+
+const { x : a, y :b , z : c} = voxel;
+
+console.log(a+','+b+ ',' +c+ ',' )
+
+```
+
+output
+
+```
+3.36,7.4,6.54,
+```
+
+
+
+For example
+
+```js
+const AVG_TEMPERATURES = {
+    today : 77.5,
+    tomorrow  : 79,
+};
+
+function getTempOfTmrw(avTemperatures){
+    'use strict';
+
+//    const tempOfTomorrow = avTemperatures.tomorrow;
+    // 可以这样理解：把对象 avTemperatures 中的 tomorrow   元素 赋给一个叫 tempOfTomorrow 的对象
+    const {tomorrow  : tempOfTomorrow }= avTemperatures;
+
+    return tempOfTomorrow;
+
+}
+
+console.log(getTempOfTmrw(AVG_TEMPERATURES));
+```
+
+output
+
+```
+79
+```
+
+
+
+
+
+
+
+# 109. Destructuring Assignment with Nested Object
+
+**对象的多层嵌套**
+
+```js
+const LOCAL_FORECAST = {
+    today : { min : 72, max :83},
+    tomorrow : {min : 73.3, max : 84.6}
+};
+
+function getMaxOfTmrw(forecast){
+    "use strict"
+//    const maxOfTomorrow = forecast.tomorrow.max;
+  // 可以这样记 ： 对象 forwcast 里面 的 tomorrow 里面的 max 给一个叫 maxOfTomorrow 的 变量
+    const {tomorrow : {max : maxOfTomorrow } }= forecast;
+
+    return maxOfTomorrow
+}
+console.log(getMaxOfTmrw(LOCAL_FORECAST));
+```
+
+
 
