@@ -629,34 +629,33 @@ console.log(mystr);
 ## 32.Bracket Notation to Find Nth character in String
 
 ```js
-───────┬───────────────────────────────────────────────────────────────       │ File: 5.js───────┼───────────────────────────────────────────────────────────────   1   │ var mystr = "字符串1"   2   │   3   │ console.log(mystr[3]);   4   │ // the output will be 1───────┴───────────────────────────────────────────────────────────────// output =>// 1
+var mystr = "字符串1"
+console.log(mystr[3]); 
+// the output will be
+// output =>
+// 1
 ```
 
 
 
-## 33.Brackt Notation to find Lat Cahracter in String
+## 33.Brackt Notation to find Last Cahracter in String
 
 ```js
-~~>:~/test $ bat 5.js
-───────┬───────────────────────────────────────────────────────────────
-       │ File: 5.js
-───────┼───────────────────────────────────────────────────────────────
-   1   │ // 查找某个字母
-   2   │ var mystr = "字符串1"
-   3   │ console.log(mystr[1]);
-   4   │ // the output will be 符
-   5   │
-   6   │
-   7   │ // 如何查找最后一个字符 ??
-   8   │ var lastStr = mystr.length
-   9   │ console.log(lastStr)    // => number 4
-  10   │
-  11   │ console.log(mystr);
-  12   │ console.log(mystr[mystr.length-1]);
-  13   │ console.log(mystr[lastStr]);
-  14   │
-  15   │
-───────┴───────────────────────────────────────────────────────────────
+// 查找某个字母
+var mystr = "字符串1"
+console.log(mystr[1]);
+// the output will be 符
+
+ // 如何查找最后一个字符 ??
+var lastStr = mystr.length
+console.log(lastStr)    // => number 4
+
+console.log(mystr);
+console.log(mystr[mystr.length-1]);
+console.log(mystr[lastStr]);
+
+
+
 ~~>:~/test $ nodejs 5.js
 符
 4
@@ -2941,4 +2940,10 @@ console.log(getMaxOfTmrw(LOCAL_FORECAST));
 ```
 
 
+
+
+
+# 110. use destructurong Assignment to Assign Variables From Arrays
+
+**you can use destructuring assignment to assign variable  frrom arrays  **
 
