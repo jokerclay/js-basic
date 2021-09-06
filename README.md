@@ -724,7 +724,8 @@ var myArray = ["Quincy",1]console.log(myArray)// output =>[ 'Quincy', 1 ]
 
 
 ```js
-var myArray = [["clay liu",21],["jane sox"],32];console.log(myArray);// output =>[ [ 'clay liu', 21 ], [ 'jane sox' ], 32 ]
+var myArray = [["clay liu",21],["jane sox"],32];console.log(myArray);
+// output =>[ [ 'clay liu', 21 ], [ 'jane sox' ], 32 ]
 ```
 
 
@@ -733,7 +734,7 @@ var myArray = [["clay liu",21],["jane sox"],32];console.log(myArray);// output =
 
 
 
-## 35. Access Array Data with Indexes
+## 37. Access Array Data with Indexes
 
 ```js
 ───────┬──────────────────────────────────────────
@@ -754,7 +755,7 @@ var myArray = [["clay liu",21],["jane sox"],32];console.log(myArray);// output =
 
 
 
-## 36.Modify Array Data with Indexes
+## 38.Modify Array Data with Indexes
 
 ```js
 ~~>:~/test $ bat 10.js
@@ -775,7 +776,7 @@ var myArray = [["clay liu",21],["jane sox"],32];console.log(myArray);// output =
 
 
 
-## 37. Access Multi-Dimensional Arrrays with Indexes
+## 39. Access Multi-Dimensional Arrrays with Indexes
 
 ```js
 ~~>:~/test $ bat 11.js
@@ -799,59 +800,91 @@ var myArray = [["clay liu",21],["jane sox"],32];console.log(myArray);// output =
 
 
 
-## 38. Manpulate Arrays with push()
+## 40. Manpulate Arrays with push()
 
 ```js
-~~>:~/test $ bat 12.js───────┬─────────────────────────────────────────────────────       │ File: 12.js───────┼─────────────────────────────────────────────────────   1   │ var myArray = [["john",23],["clay",21]];   2   │ myArray.push(["cc",26]);   3   │   4   │ console.log(myArray);───────┴─────────────────────────────────────────────────────~~>:~/test $ nodejs 12.js[ [ 'john', 23 ], [ 'clay', 21 ], [ 'cc', 26 ] ]
+
+var myArray = [["john",23],["clay",21]];   
+myArray.push(["cc",26]);   
+ 
+console.log(myArray);
+
+
+
+// ouyput
+// [ [ 'john', 23 ], [ 'clay', 21 ], [ 'cc', 26 ] ]
 ```
 
 
 
 
 
-## 39.Manpulate Arrays with pop()
+## 41.Manpulate Arrays with pop()
 
  
 
 ```js
-~~>:~/test $ bat pop.js───────┬─────────────────────────────────────────────────────       │ File: pop.js───────┼─────────────────────────────────────────────────────   1   │ var myArray = [["john",23],["clay",21]];   2   │ myArray.pop();   3   │   4   │ console.log(myArray);───────┴─────────────────────────────────────────────────────~~>:~/test $ nodejs pop.js[ [ 'john', 23 ] ]~~>:~/test $
+// ~~>:~/test $ bat pop.js
+
+var myArray = [["john",23],["clay",21]];
+myArray.pop(); 
+console.log(myArray);
+
+// ~~>:~/test $ nodejs pop.js
+// [ [ 'john', 23 ] ]
 ```
 
 
 
-## 40.Manpulate Array with shift()
+## 42.Manpulate Array with shift()
 
 
 
 ```js
- ~~>:~/test $ bat shitf.js───────┬─────────────────────────────────────────────────────       │ File: shitf.js───────┼─────────────────────────────────────────────────────   1   │ var myArray = [["john",23],["clay",21]];   2   │ myArray.shift();   3   │   4   │ console.log(myArray);───────┴─────────────────────────────────────────────────────~~>:~/test $ nodejs shitf.js[ [ 'clay', 21 ] ]
+//  ~~>:~/test $ bat shitf.js
+var myArray = [["john",23],["clay",21]]; 
+myArray.shift();  
+console.log(myArray);
+// ~~>:~/test $ nodejs shitf.js
+// [ [ 'clay', 21 ] ]
 ```
 
 
 
 
 
-## 42.Manpulate Array with unshift()
+## 43.Manpulate Array with unshift()
 
 
 
 ```js
-~~>:~/test $ bat unshift.js───────┬─────────────────────────────────────────────────────       │ File: unshift.js───────┼─────────────────────────────────────────────────────   1   │ var myArray = [["john",23],["clay",21]];   2   │ myArray.unshift("Hello world");   3   │   4   │ console.log(myArray);───────┴─────────────────────────────────────────────────────~~>:~/test $ nodejs unshift.js[ 'Hello world', [ 'john', 23 ], [ 'clay', 21 ] ]
+// ~~>:~/test $ bat unshift.js
+var myArray = [["john",23],["clay",21]];
+myArray.unshift("Hello world"); console.log(myArray);
+
+// ~~>:~/test $ nodejs unshift.js
+// [ 'Hello world', [ 'john', 23 ], [ 'clay', 21 ] ]
 ```
 
 
 
-## 43. Shoping List
+## 44. Shoping List
 
 ```js
-~~>:~/test $ bat shopList.js───────┬─────────────────────────────────────────────────────       │ File: shopList.js───────┼─────────────────────────────────────────────────────   1   │ var mylist =[ ["cereal",3],["milk",2],["banana",3],   2   │     ["juice",2],   3   │     ["eggs",4],   4   │ ]   5   │   6   │ console.log(mylist)   7   │ console.log(mylist.length)───────┴─────────────────────────────────────────────────────~~>:~/test $ nodejs shopList.js[ [ 'cereal', 3 ],  [ 'milk', 2 ],  [ 'banana', 3 ],  [ 'juice', 2 ],  [ 'eggs', 4 ] ]5~~>:~/test $
+// ~~>:~/test $ bat shopList.js
+var mylist =[ ["cereal",3],["milk",2],["banana",3],["juice",2],    ["eggs",4],  ]  
+
+console.log(mylist) console.log(mylist.length)
+// ~~>:~/test $ nodejs shopList.js
+// [ [ 'cereal', 3 ],  [ 'milk', 2 ],  [ 'banana', 3 ],  [ 'juice', 2 ],  [ 'eggs', 4 ] ]
+
 ```
 
 
 
 
 
-## 44. With Reuseable code with function
+## 45. With Reuseable code with function
 
 ```js
 ~~>:~/test $ bat func.js───────┬─────────────────────────────────────────────────────────       │ File: func.js───────┼─────────────────────────────────────────────────────────   1   │ function reuseablefunction ()   2   │ {   3   │     console.log("heyy world ~~")   4   │ }   5   │ reuseablefunction();   6   │ reuseablefunction();   7   │ reuseablefunction();   8   │ reuseablefunction();───────┴─────────────────────────────────────────────────────────~~>:~/test $ nodejs func.jsheyy world ~~heyy world ~~heyy world ~~heyy world ~~
@@ -863,7 +896,7 @@ var myArray = [["clay liu",21],["jane sox"],32];console.log(myArray);// output =
 
 
 
-## 45.Passing values to Function with Arguments
+## 46.Passing values to Function with Arguments
 
 **when the fucnrion is called, we need to pass the arguments to the function **
 
@@ -887,7 +920,7 @@ var myArray = [["clay liu",21],["jane sox"],32];console.log(myArray);// output =
 
 
 
-## 46. Global Scope and functions 
+## 47. Global Scope and functions 
 
 **Scope refers to the visibility of variables**
 
@@ -938,7 +971,7 @@ oopsGlobal:  5
 
 
 
-## 47. Local Scope and functions
+## 48. Local Scope and functions
 
 **varoables which are declared within a function as well as the function parameters have local scope.**
 
