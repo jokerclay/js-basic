@@ -887,7 +887,17 @@ console.log(mylist) console.log(mylist.length)
 ## 45. With Reuseable code with function
 
 ```js
-~~>:~/test $ bat func.js───────┬─────────────────────────────────────────────────────────       │ File: func.js───────┼─────────────────────────────────────────────────────────   1   │ function reuseablefunction ()   2   │ {   3   │     console.log("heyy world ~~")   4   │ }   5   │ reuseablefunction();   6   │ reuseablefunction();   7   │ reuseablefunction();   8   │ reuseablefunction();───────┴─────────────────────────────────────────────────────────~~>:~/test $ nodejs func.jsheyy world ~~heyy world ~~heyy world ~~heyy world ~~
+// ~~>:~/test $ bat func.js
+function reuseablefunction () {  
+    console.log("heyy world ~~")   
+} 
+reuseablefunction();
+reuseablefunction();
+reuseablefunction();
+reuseablefunction();
+
+// ~~>:~/test $ nodejs func.js
+// heyy world ~~heyy world ~~heyy world ~~heyy world ~~
 ```
 
 
@@ -978,7 +988,18 @@ oopsGlobal:  5
 **That means they're only visible from within the function**
 
 ```js
-~~>:~/test $ bat localVariable.js───────┬─────────────────────────────────────────────────────────       │ File: localVariable.js───────┼─────────────────────────────────────────────────────────   1   │ function myLocalScope()   2   │ {   3   │     var myVar = 5;   4   │     console.log(myVar);   5   │ }   6   │ myLocalScope();   7   │ console.log(myVar);───────┴─────────────────────────────────────────────────────────~~>:~/test $ nodejs localVariable.js5/home/pi/test/localVariable.js:7console.log(myVar);            ^ReferenceError: myVar is not defined
+~~>:~/test $ bat localVariable.js
+function myLocalScope()
+{ 
+    var myVar = 5;
+    console.log(myVar);
+}
+myLocalScope();
+console.log(myVar);
+~~>:~/test $ nodejs localVariable.js
+5
+/home/pi/test/localVariable.js:7console.log(myVar);
+	^ReferenceError: myVar is not defined
 ```
 
 
@@ -990,7 +1011,17 @@ oopsGlobal:  5
 **it is possiable to have both loacal and global variables with the same name **
 
 ```js
-~~>:~/test $ bat g-l-scope.js───────┬─────────────────────────────────────────────────────────       │ File: g-l-scope.js───────┼─────────────────────────────────────────────────────────   1   │ var outerWear = "T-shirt";   2   │   3   │ function myOutFit()   4   │ {   5   │     var outerWear = "sweater";   6   │   7   │     return outerWear;   8   │ }   9   │  10   │ console.log(myOutFit());  11   │ console.log(outerWear);  12   │───────┴─────────────────────────────────────────────────────────~~>:~/test $ nodejs g-l-scope.jssweaterT-shirt~~>:~/test $
+// ~~>:~/test $ bat g-l-scope.js
+var outerWear = "T-shirt"; 
+function myOutFit()
+{ 
+    var outerWear = "sweater";
+    return outerWear;
+}
+console.log(myOutFit());
+console.log(outerWear);
+// ~~>:~/test $ nodejs g-l-scope.js
+// sweaterT-shirt
 ```
 
 
@@ -1055,7 +1086,18 @@ Yes, it's true
 ## 52. Comparison with the Equality Operator
 
 ```js
-~~>:~/test $ bat equal.js───────┬──────────────────────────────────────────────────────────────       │ File: equal.js───────┼──────────────────────────────────────────────────────────────   1   │ function testEqual(val)   2   │ {   3   │     if (val == 12)   4   │     {   5   │         return "Equal";   6   │     }   7   │     return "Not Equal"   8   │ }   9   │  10   │ console.log(testEqual(10));───────┴──────────────────────────────────────────────────────────────~~>:~/test $ nodejs equal.jsNot Equal
+// ~~>:~/test $ bat equal.js
+function testEqual(val)
+{
+    if (val == 12)
+    {
+        return "Equal";
+    } 
+    return "Not Equal" 
+} 
+console.log(testEqual(10));
+// ~~>:~/test $ nodejs equal.js
+// Not Equal
 ```
 
 
@@ -1158,7 +1200,20 @@ Not equal
 ## 57 . Comparison with the Greater Than Or Equal to  Operator
 
 ```js
-~~>:~/test $ bat greaterOrEqual.js───────┬──────────────────────────────────────────────────────────────       │ File: greaterOrEqual.js───────┼──────────────────────────────────────────────────────────────`   1   │ function testGreaterThanOrEqual(val)`   2   │ {   3   │     if (val >= 20 )   4   │     {   5   │         return "20 or over ";   6   │     }   7   │     if(val >=10)   8   │     {   9   │         return "10 or over ";  10   │     }  11   │  12   │     return " Less than 10"  13   │ }  14   │  15   │ console.log(testGreaterThanOrEqual(10))───────┴──────────────────────────────────────────────────────────────~~>:~/test $ nodejs  greaterOrEqual.js10 or over
+// ~~>:~/test $ bat greaterOrEqual.js
+function testGreaterThanOrEqual(val)
+{
+    if (val >= 20 ) 
+    {
+        return "20 or over ";
+    } 
+    if(val >=10)
+    {
+        return "10 or over ";
+    } 
+    return " Less than 10" } console.log(testGreaterThanOrEqual(10))
+// ~~>:~/test $ nodejs  greaterOrEqual.js
+// 10 or over
 ```
 
 
@@ -1226,7 +1281,16 @@ console.log(testLessOrEqual(10))
 ## 60. Comparisons with the Logical And operator
 
 ```js
-function testLogicalAnd(val){    if(val <= 50 && val >=25)		// both of it must be true     {        return "Yes";    }        return "No";}console.log(testLogicalAnd(30))// output =>// Yes
+function testLogicalAnd(val)
+{    if(val <= 50 && val >=25)
+    // both of it must be true 
+	{ 
+        return "Yes";
+    }
+    return "No";
+};
+console.log(testLogicalAnd(30))
+// output =>// Yes
 ```
 
 
@@ -1310,13 +1374,42 @@ testLogicalAnd(6)
 ## 64. Logical Oreder in If else Statements
 
 ```js
-function testLogicalAnd(val){    var result = "";    if(val < 10)    {        result = "Less than 10"    }    else if(val < 5)    {        result = "Less than 5"    }    else    {        result = "Greater ot eequal to 10";    }    console.log(result);}testLogicalAnd(3)// output =>// Less than 10
+function testLogicalAnd(val)
+{    var result = "";
+ if(val < 10) 
+ { 
+     result = "Less than 10"
+ }else if(val < 5)
+ {        
+     result = "Less than 5"
+ }else{
+     result = "Greater ot eequal to 10";
+ }
+ console.log(result);
+}
+testLogicalAnd(3)
+// output =>
+// Less than 10
 ```
 
 **SO the order is matter , when you use else if  you  should thing about the order **
 
 ```js
-function testLogicalAnd(val){    var result = "";    if(val < 5)    {        result = "Less than 5"    }    else if(val < 10)    {        result = "Less than 10"    }    else    {        result = "Greater ot eequal to 10";    }    console.log(result);}testLogicalAnd(3)// output =>// Less than 5
+function testLogicalAnd(val){
+    var result = "";    
+    if(val < 5) 
+    {        
+        result = "Less than 5"
+    }else if(val < 10)
+    {        
+        result = "Less than 10"
+    }else
+    {        
+        result = "Greater ot eequal to 10";
+    }    
+    console.log(result);}testLogicalAnd(3)
+
+// output =>// Less than 5
 ```
 
 
@@ -1413,7 +1506,29 @@ console.log(golfScore(5,4));
 
 
 ```js
-function switchState(val){switch(val){    case "1":    console.log( "number 1")    break;    case "2":    console.log( "number 2")    break;    case "3":    console.log( "number 3")    break;    case "4":    console.log( "number 4")    break;        default:        console.log("Not Included")}}switchState("9")// output =>// Not Included
+function switchState(val)
+{
+    switch(val)
+    {    
+        case "1":
+            console.log( "number 1") 
+            break;
+        case "2":
+            console.log( "number 2")
+            break;    
+        case "3":
+            console.log( "number 3")
+            break;
+        case "4":
+            console.log( "number 4")
+            break;
+        default:
+            console.log("Not Included")
+    }
+}
+switchState("9")
+
+// output =>// Not Included
 ```
 
 
@@ -1517,7 +1632,41 @@ console.log(abTest(-2,2));
 ## 70. Counting Cards
 
 ```js
-var count = 0;function cc(card){    switch(card)    {        case 2:        case 3:        case 4:        case 5:        case 6:            count++;            break;        case 10:        case "J":        case "Q":        case "K":        case "A":            count--;            break;    }    var holdbet = "Hold"    if(count > 0)    {        holdbet = "Bet"    }    return count + " " + holdbet;}cc(2);cc('K');cc(10);cc('K');cc('A');console.log(cc(4));// output =>// -2 Hold
+var count = 0;
+function cc(card)
+{
+    switch(card)
+    {        
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        case 6:
+            count++;
+            break;
+        case 10:
+        case "J":
+        case "Q":
+        case "K":
+        case "A":
+            count--;
+            break;
+    }
+    var holdbet = "Hold"
+    if(count > 0)
+    {
+        holdbet = "Bet" 
+    }
+    return count + " " + holdbet;
+}
+cc(2);
+cc('K');
+cc(10);
+cc('K');
+cc('A');
+console.log(cc(4));
+
+// output =>// -2 Hold
 ```
 
 
@@ -2178,7 +2327,21 @@ console.log(myTotal)
 ## 89.Nasting for loops
 
 ```js
-function multiplyAll(arr){    var product  =1;    for (var i = 0; i < arr.length; i++ )    {        for(var j=0; j<arr[i].length; j++)        {            product *= arr[i][j]        }    }    return product;}var product = multiplyAll([[1,2],[3,4],[5,6,7]]);console.log(product);// output => 5040
+function multiplyAll(arr){
+    var product  =1; 
+    for (var i = 0; i < arr.length; i++ )
+    {
+        for(var j=0; j<arr[i].length; j++)
+        {
+            product *= arr[i][j]
+        } 
+    }    
+    return product;
+}
+var product = multiplyAll([[1,2],[3,4],[5,6,7]]);
+console.log(product);
+
+// output => 5040
 ```
 
 
@@ -2196,7 +2359,17 @@ do while loops will always run at least once time
 and then it will check the condition
 
 ```js
-var myArray = [];var i = 10;do{    myArray.push(i);    i++;} while (i < 5)console.log(i,myArray);// output =>  11 [ 10 ]
+var myArray = [];
+var i = 10;
+do{
+    myArray.push(i);
+    i++;
+} 
+while (i < 5)
+console.log(i,myArray);
+
+
+// output =>  11 [ 10 ]
 ```
 
 
@@ -2206,7 +2379,20 @@ var myArray = [];var i = 10;do{    myArray.push(i);    i++;} while (i < 5)consol
 ## 91.  random Whole Number
 
 ```js
-var randomNumberBetter0And19 = Math.floor(Math.random() * 20);function randomWholeNum(){    return Math.floor(Math.random() * 10);}for(var i = 0; i < 5; i++){    console.log(randomWholeNum());}// output => // 5 // 9// 6// 0// 4
+var randomNumberBetter0And19 = Math.floor(Math.random() * 20);function randomWholeNum()
+{    
+    return Math.floor(Math.random() * 10);
+}
+for(var i = 0; i < 5; i++)
+{    
+    console.log(randomWholeNum());
+}
+// output => 
+// 5 
+// 9
+// 6
+// 0
+// 4
 ```
 
 
