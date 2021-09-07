@@ -3664,3 +3664,52 @@ console.log(temp)
 26
 ```
 
+
+
+
+
+# 118. understand the different berween import and require
+
+index.js
+
+```js
+import {capitalizeString} from"./import"
+
+const cap = capitalizeString("hello!");
+
+console.log(cap);
+```
+
+import.js
+
+```js
+export const capitalizeString = str => str.toUpperCase()
+```
+
+
+
+
+
+
+
+# 119 . Use export to Resue code block
+
+
+
+**you export a variable  from ond file  , so that you can import them  into another file**
+
+**that is how you can use different code **
+
+```js
+const capitalizeString = (string) => {
+    return string.charAt(0).toUpperCase() + string.silce(1);
+}
+// export function
+export { capitalizeString };
+
+
+// export variable
+export const foo = "bar";
+export const bar = "foo";
+```
+
