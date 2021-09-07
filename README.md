@@ -3686,7 +3686,7 @@ import.js
 export const capitalizeString = str => str.toUpperCase()
 ```
 
-
+​	
 
 
 
@@ -3711,5 +3711,61 @@ export { capitalizeString };
 // export variable
 export const foo = "bar";
 export const bar = "foo";
+```
+
+
+
+
+
+
+
+# 120. Use * to import everythng from a file
+
+**if a file multiple different things, you can export differernt things indeividually or you can import everything  **
+
+**how import everything in a file  ?**
+
+```js
+import * as a_object_you_create_to_store_everything_in from "file_name"
+```
+
+```js
+import * as capitalizeString from "test"
+```
+
+
+
+
+
+
+
+# 121. create an export fallback with explort default
+
+
+
+**export default **
+
+only export one thing from a file
+
+```js
+export default fumction subtract(x,y){return x -y}
+```
+
+
+
+
+
+
+
+
+
+# 122. Import a default Export
+
+```
+
+// import default export 不用加 花括号
+
+import subtract from "math_function"
+substract(4,7)
 ```
 
