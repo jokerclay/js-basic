@@ -3432,3 +3432,235 @@ output
 { name: 'clay', age: '32', gender: 'man' }
 ```
 
+
+
+
+
+```js
+// const createPerson = (name,age,gender) =>{
+//     return {
+//         name : name,
+//         age : age,
+//         gender : gender
+//     };
+// };
+
+const createPerson = (name,age,gender) =>({name,age,gender})
+console.log(createPerson("clay","32","man"));
+```
+
+output
+
+```js
+{ name: 'clay', age: '32', gender: 'man' }
+```
+
+
+
+
+
+
+
+
+
+# 115. Write concise Declaratiev Function
+
+**an object can contain a function **
+
+**this is the long way to put a funciton within a object ** 
+
+```js
+const biycle = {
+    gear : 2,
+    setGear : function(newGear){
+        "use strict";
+        this.gear = newGear;
+    }
+};
+
+biycle.setGear(9);
+console.log(biycle.gear);
+```
+
+output
+
+```
+9
+```
+
+**but there is a simpler way   **
+
+```js
+const biycle = {
+    gear : 2,
+    // setGear : function(newGear){
+    setGear(newGear){
+        "use strict";
+        this.gear = newGear;
+    }
+};
+
+biycle.setGear(9);
+console.log(biycle.gear);
+```
+
+output
+
+```
+9
+```
+
+
+
+
+
+
+
+# 116. Use class Syntax to define a constructor Function
+
+**ES6 provide a snytax to create objects using the class keyword 	** 
+
+```js
+// var SpaceShuttle = function (targetPlanet){
+//     this.targetPlanet = targetPlanet;
+// }
+
+
+class SpaceShuttle{
+    constructor(targetPlanet)
+    {
+         this.targetPlanet = targetPlanet;
+    }
+}
+
+var zeus = new SpaceShuttle("clay");
+
+console.log(zeus.targetPlanet);
+```
+
+output
+
+```
+clay
+```
+
+ 
+
+```js
+function makeClass(){
+    class Vegetable{
+        constructor(name){
+            this.name = name;
+        }
+    }
+    return Vegetable;
+}
+
+const Vegetable = makeClass();
+const carrot = new Vegetable('carrot');
+console.log(carrot.name);
+
+```
+
+output
+
+```
+carrot
+```
+
+
+
+
+
+# 117. Use getter and setter to control Access to an Object
+
+**with the class object you ofhen want ti obtain value form object  and  set a value of a property within an object this often called getters and setters**
+
+```js
+Aclass Book{
+    // 构造函数
+    constructor(author){
+        // the private variable is this._author that get set when you construct
+        // the object
+
+        this._author = author;
+    }
+    // function getter to get the book's author
+    // getter function are mean to simply return get the value of an object's
+    // private variable to user without the user directly accessing the private
+    // variable .
+
+    // when we do get writer's going to return this._author, so, you never need
+    // to directly interact with this variable ., but it's going to get the
+    // writer which is the author here
+    get writer(){
+        return this._author;
+    }
+    // function setter to set the book's author
+    //
+    // and the setter is the same, you never interact with the _author, but you
+    // can set that with the writer setter.
+
+    // this change could invoke calculations or even overriding the previous
+    // completely
+    // so you can have any code lines in the setter to ultimately maybe do
+    // different calculations before you  set it or calculations before you
+    // get the property
+    set writer(uodatedAuthor){
+        this._author = updatedAuthor;
+    }
+}
+
+function makeClass(){
+
+    return Thermostat;
+}
+```
+
+
+
+
+
+example
+
+**what we gonna to do  is make our own getter and setter for the `Thermostat`  class**
+
+```js
+function myClass(){
+
+    class Thermostat{
+
+    constructor(temp){
+            this._temp = 5/9 * (temp - 32);
+        }
+    get temperature(){
+        return this._temp;
+    }
+    set temperature(updatedTemp){
+        this._temp = updatedTemp;
+    }
+}
+    return Thermostat;
+}
+
+// 声明一个变量 Thermostat 为 myClass 函数
+const Thermostat = myClass();
+// 声明一个变量 thermos 为一个新的对象，继承 Thermostat 对象，参数为 76
+const thermos = new Thermostat(76);
+// 声明一个变量 temp 为 thermos 传入 76  后 获得 第一次构造函数计算后的结果
+let temp = thermos.temperature;
+
+// 将 temp 更新为 26
+thermos.temperature = 26 ;
+temp = thermos.temperature;
+
+// 打印出 temp
+console.log(temp)
+```
+
+ output
+
+```js
+26
+```
+
