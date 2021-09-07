@@ -3154,7 +3154,7 @@ function getMaxOfTmrw(forecast){
     const {tomorrow : {max : maxOfTomorrow } }= forecast;
 
     return maxOfTomorrow
-}
+} 
 console.log(getMaxOfTmrw(LOCAL_FORECAST));
 ```
 
@@ -3164,5 +3164,271 @@ console.log(getMaxOfTmrw(LOCAL_FORECAST));
 
 # 110. use destructurong Assignment to Assign Variables From Arrays
 
-**you can use destructuring assignment to assign variable  frrom arrays  **
+**you can use destructuring assignment to assign variable  from arrays  **
+
+```js
+// we are assigning the first element to  a  z and x
+const [z,x] = [1,2,3,4,5,6]
+console.log([z,x])
+console.log(z,x)
+
+// if we want skip the 3th elemnet and assign the 4th element to a variable
+// we can do this
+const [m,n, ,fourth_element] = [1,2,3,4,5,6]
+console.log(m,n,fourth_element)
+
+
+
+// you can use dedturvturing of arrays to  switch the places of variables
+
+let a = 8;
+let b = 6;
+(()=>{
+    "use strict";
+    // using destructuring arrays switch the variables of a and b
+
+    [a,b] = [b,a]
+
+})(); // 立即调用函数
+
+    console.log(a)
+    console.log(b)
+
+
+```
+
+output
+
+```js
+ node  assignment.js
+[ 1, 2 ]
+1 2
+1 2 4
+6
+8
+```
+
+
+
+
+
+
+
+
+
+# 111. use Destrcturing Assignment with the rest  Operator
+
+**we can  sue destructuring assignment with the rest operator to reassign array elements**
+
+
+
+```js
+const source = [1,2,3,4,6,5,7,8,9,10]
+
+function removeFirstTwo(list){
+
+    const [ , , ...arr] = list;
+
+    return arr;
+}
+const arr = removeFirstTwo(source);
+
+console.log(arr);
+console.log(typeof(arr));
+console.log(source);
+console.log(typeof(source));
+
+```
+
+
+
+output
+
+```
+[
+  3, 4, 6,  5,
+  7, 8, 9, 10
+]
+object
+[
+  1, 2, 3, 4,  6,
+  5, 7, 8, 9, 10
+]
+object
+```
+
+
+
+
+
+
+
+
+
+# 112. Use  
+
+**you can use destructuring assignment to pass an object an function's parameter**
+
+```js
+const stats = {
+    max:56.78,
+    standard_deviation : 4.43,
+    median : 34.54,
+    mode : 23.87,
+    min :-0.75,
+    average : 35.85
+};
+
+// const half = (function(){
+//     return function half(stats){
+//         return (stats.max +stats.min)/ 2.0;
+//     };
+// })();
+
+
+const half = (function(){
+    // 当 stats 对象传进来的时候，会自动获取 max 和 min , 通常用于 API calls 
+    return function half({max,min}){
+        return (max +min)/ 2.0;
+    };
+})();
+
+
+console.log(stats)
+console.log(half(stats));
+```
+
+output
+
+```js
+ node Desreucturing_Assignment_pass_object_as_function_Parameters.js
+{
+  max: 56.78,
+  standard_deviation: 4.43,
+  median: 34.54,
+  mode: 23.87,
+  min: -0.75,
+  average: 35.85
+}
+28. 015
+```
+
+
+
+
+
+
+
+
+
+# 112. Create string using Template literals
+
+```js
+const person = {
+    name : "clay",
+    age : 20,
+}
+
+// Template literal with muyi-line and string interpolation
+// 使用下面这个格式可以在文字中使用变量
+const greeting = ` Hello! my name is  ${person.name} ! I am ${person.age} years old `
+// 使用 ` ` 符号， 可以换行， 也可以在 字符中 直接使用 `
+const greeting_two = ` Hello!
+    my name is  ${person.name} !
+    I am ${person.age} years old `
+
+console.log(greeting);
+console.log(greeting_two);
+                               
+```
+
+output
+
+```
+ Hello! my name is  clay ! I am 20 years old
+ Hello!
+    my name is  clay !
+    I am 20 years old
+```
+
+
+
+
+
+
+
+# 113.  practicels
+
+****
+
+```js
+const result = {
+    success : [ "max-length", "no-amd", "prefer-arrow-functions"],
+    failure : [ "no-var", "var-on-top", "linebreak"],
+    skipped : [ "id-blacklist", "no-dup-key"],
+};
+
+function makeList(arr){
+    // 将变量 resultDisplayArry 初始化为空数组
+    const resultDisplayArry = [];
+
+    for(let i = 0; i<arr.length; i++)
+    {
+        // 将 对象 result 中的每一个元素分别以 以下格式 push 到 空数组中
+        resultDisplayArry.push(`<li class = "text-warning" ${arr[i]}> </li>`) }
+        return resultDisplayArry;
+    }
+
+
+
+
+/** makeList(result.failure) should return
+ * [ `<li class = "text-warning"> no-var </li> `
+ *  `<li class = "text-warning"> no-on-top </li> `
+ *  `<li class = "text-warning"> linebreak </li> `]
+ **/
+
+const resultDisplayArry = makeList(result.failure);
+
+console.log(resultDisplayArry);
+```
+
+output
+
+```js
+[
+  '<li class = "text-warning" no-var> </li>',
+  '<li class = "text-warning" var-on-top> </li>',
+  '<li class = "text-warning" linebreak> </li>'
+]
+
+```
+
+
+
+
+
+
+
+# 114. write concise Obj ect Literal Declaration Using Simple Fields
+
+**ES6 added nice supprot for easily defining object literals **
+
+```js
+const createPerson = (name,age,gender) =>{
+    return {
+        name : name,
+        age : age,
+        gender : gender
+    };
+};
+
+console.log(createPerson("clay","32","man"));
+```
+
+output
+
+```js
+{ name: 'clay', age: '32', gender: 'man' }
+```
 
